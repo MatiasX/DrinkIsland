@@ -1,13 +1,24 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('src/assets/drinkislandbar.jfif') no-repeat center center fixed;
-    background-size: cover;
-    filter: blur(10px); /* Itt állíthatod a homályosítás mértékét */
-  }
-  
-  app-root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+.container-background {
+  background: url('/assets/animebar.jpeg') center center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+.container-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(5px);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  color: white; 
+}
