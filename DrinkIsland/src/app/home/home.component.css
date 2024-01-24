@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('src/assets/drinkislandbar.jfif') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(10px); /* Itt állíthatod a homályosítás mértékét */
+  }
+  
+  app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }

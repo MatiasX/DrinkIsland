@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Alkohol kitisztulási idő kalkulátor</h1>
+  <form (ngSubmit)="calculate()">
+    <label for="weight">Súly (kg): </label>
+    <input type="number" id="weight" [(ngModel)]="weight" name="weight" required>
+
+    <label for="gender">Nem: </label>
+    <select id="gender" [(ngModel)]="gender" name="gender" required>
+      <option value="male">Férfi</option>
+      <option value="female">Nő</option>
+    </select>
+
+    <label for="alcoholAmount">Elfogyasztott alkohol mennyisége (dl): </label>
+    <input type="number" id="alcoholAmount" [(ngModel)]="alcoholAmount" name="alcoholAmount" required>
+
+    <label for="drinkAlcoholPercentage">Alkohol százaléka: </label>
+    <input type="number" id="drinkAlcoholPercentage" [(ngModel)]="drinkAlcoholPercentage" name="drinkAlcoholPercentage" required>
+
+    <label for="timeSinceLastDrink">Utolsó ital elfogyasztása óta eltelt ideje (óra): </label>
+    <input type="number" id="timeSinceLastDrink" [(ngModel)]="timeSinceLastDrink" name="timeSinceLastDrink" required>
+
+    <button type="submit">Számol</button>
+  </form>
+
+  <div *ngIf="result !== undefined">
+    <p>Az alkohol kitisztulási várható idő: {{ result | number: '1.2-2' }} óra.</p>
+  </div>
+</div>

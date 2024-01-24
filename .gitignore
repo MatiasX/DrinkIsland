@@ -1,0 +1,42 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/DrinkIsland/dist
+/DrinkIsland/tmp
+/DrinkIsland/out-tsc
+/DrinkIsland/bazel-out
+
+# Node
+/DrinkIsland/node_modules
+/DrinkIsland/npm-debug.log
+/DrinkIsland/yarn-error.log
+
+# IDEs and editors
+/DrinkIsland/.idea/
+/DrinkIsland/.project
+/DrinkIsland/.classpath
+/DrinkIsland/.c9/
+/DrinkIsland/*.launch
+/DrinkIsland/.settings/
+/DrinkIsland/*.sublime-workspace
+
+# Visual Studio Code
+/DrinkIsland/.vscode/*
+/DrinkIsland/!.vscode/settings.json
+/DrinkIsland/!.vscode/tasks.json
+/DrinkIsland/!.vscode/launch.json
+/DrinkIsland/!.vscode/extensions.json
+/DrinkIsland/.history/*
+
+# Miscellaneous
+/DrinkIsland/.angular/cache
+/DrinkIsland/.sass-cache/
+/DrinkIsland/connect.lock
+/DrinkIsland/coverage
+/DrinkIsland/libpeerconnection.log
+/DrinkIsland/testem.log
+/DrinkIsland/typings
+
+# System files
+/DrinkIsland/.DS_Store
+/DrinkIsland/Thumbs.db
