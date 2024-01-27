@@ -1,0 +1,160 @@
+{
+    "ingredients": [
+      {"id": 1, "name": "Jégkocka"},
+      {"id": 2, "name": "fehér rum"},
+      {"id": 3, "name": "kókuszlikőr"},
+      {"id": 4, "name": "ananászlé"},
+      {"id": 5, "name": "tejszín"},
+      {"id": 6, "name": "ananászbefőtt"},
+      {"id": 7, "name": "vodka"},
+      {"id": 8, "name": "paradicsomlé"},
+      {"id": 9, "name": "citromlé"},
+      {"id": 10, "name": "só"},
+      {"id": 11, "name": "bors"},
+      {"id": 12, "name": "Tabasco szósz"},
+      {"id": 13, "name": "worcestershire szósz"},
+      {"id": 14, "name": "barnarum"},
+      {"id": 15, "name": "triple sec"},
+      {"id": 16, "name": "apricot brandy"},
+      {"id": 17, "name": "mandulaszirup"},
+      {"id": 18, "name": "limelé"},
+      {"id": 19, "name": "bacardi cata blanca"},
+      {"id": 20, "name": "lime"},
+      {"id": 21, "name": "mentalevél"},
+      {"id": 22, "name": "cukor"},
+      {"id": 23, "name": "szódavíz"},
+      {"id": 24, "name": "prosecco"},
+      {"id": 25, "name": "habzó bor"},
+      {"id": 26, "name": "narancskarika"},
+      {"id": 27, "name": "szóda"},
+      {"id": 28, "name": "tört jég"},
+      {"id": 29, "name": "tequila"},
+      {"id": 30, "name": "whisky"},
+      {"id": 31, "name": "Angostura"},
+      {"id": 32, "name": "édes vermut"},
+      {"id": 33, "name": "cukorszirup"},
+      {"id": 34, "name": "bourbon whiskey"},
+      {"id": 35, "name": "gin"},
+      {"id": 36, "name": "campari"},
+      {"id": 37, "name": "vermouth rosso"},
+      {"id": 38, "name": "narancslé"},
+      {"id": 39, "name": "kockacukor"},
+      {"id": 40, "name": "Angostura bitter"},
+      {"id": 41, "name": "öntet cseresznyelikő"},
+      {"id": 42, "name": "narancs héja"},
+      {"id": 44, "name": "aperol likőr"}
+    ],
+        "cocktails": [
+          {
+            "name": "PINA COLADA",
+            "ingredients": [
+              {"id": 1, "quantity": "4cl"},
+              {"id": 3, "quantity": "2cl"},
+              {"id": 4, "quantity": "1dl"},
+              {"id": 5, "quantity": "2cl"},
+              {"id": 28, "quantity": "4db"},
+              {"id": 6, "quantity": "kocka"}
+            ]
+          },
+          {
+            "name": "BLOODY MARY",
+            "ingredients": [
+              {"id": 7, "quantity": "4.5cl"},
+              {"id": 8, "quantity": "9cl"},
+              {"id": 9, "quantity": "1.5cl"},
+              {"id": 10, "quantity": "1csip"},
+              {"id": 11, "quantity": "1csip"},
+              {"id": 12, "quantity": "1önet"},
+              {"id": 13, "quantity": "1önet"},
+              {"id": 1, "quantity": "Jégkocka"}
+            ]
+          },
+          {
+            "name": "MAI TAI",
+            "ingredients": [
+              {"id": 14, "quantity": "3cl"},
+              {"id": 2, "quantity": "3cl"},
+              {"id": 15, "quantity": "1.5cl"},
+              {"id": 16, "quantity": "2cl"},
+              {"id": 17, "quantity": "1.5cl"},
+              {"id": 4, "quantity": "8cl"},
+              {"id": 18, "quantity": "1.5cl"}
+            ]
+          },
+          {
+            "name": "Mojito",
+            "ingredients": [
+              {"id": 19, "quantity": "4cl"},
+              {"id": 7, "quantity": "4gerezd"},
+              {"id": 21, "quantity": "12db"},
+              {"id": 22, "quantity": "2tk"},
+              {"id": 23, "quantity": "szódavíz"},
+              {"id": 28, "quantity": "tört jég"}
+            ]
+          },
+          {
+            "name": "APEROL SPRITZ",
+            "ingredients": [
+              {"id": 1, "quantity": "Jégkocka"},
+              {"id": 44, "quantity": "60ml"},
+              {"id": 24, "quantity": "120ml"},
+              {"id": 27, "quantity": "40ml"},
+              {"id": 26, "quantity": "narancskarika"}
+            ]
+          },
+          {
+            "name": "Margarita",
+            "ingredients": [
+              {"id": 29, "quantity": "50ml"},
+              {"id": 15, "quantity": "20ml"},
+              {"id": 9, "quantity": "15ml"}
+            ]
+          },
+          {
+            "name": "Manhattan",
+            "ingredients": [
+              {"id": 1, "quantity": "Jégkockák"},
+              {"id": 30, "quantity": "2 rész"},
+              {"id": 31, "quantity": "1 öntet"},
+              {"id": 32, "quantity": "1 rész"}
+            ]
+          },
+          {
+            "name": "Daiquiri",
+            "ingredients": [
+              {"id": 28, "quantity": "kockajég"},
+              {"id": 2, "quantity": "100ml"},
+              {"id": 9, "quantity": "35ml"},
+              {"id": 33, "quantity": "20ml"}
+            ]
+          },
+          {
+            "name": "WHISKY SOUR",
+            "ingredients": [
+              {"id": 34, "quantity": "4cl"},
+              {"id": 9, "quantity": "2cl"},
+              {"id": 33, "quantity": "1cl"}
+            ]
+          },
+          {
+            "name": "Negroni",
+            "ingredients": [
+              {"id": 35, "quantity": "30ml"},
+              {"id": 36, "quantity": "30ml"},
+              {"id": 37, "quantity": "30ml"},
+              {"id": 1, "quantity": "jégkocka"},
+              {"id": 42, "quantity": "1 cikk narancs vagy narancshéj"}
+            ]
+          },
+          {
+            "name": "old fashioned",
+            "ingredients": [
+              {"id": 39, "quantity": "1 db kockacukor"},
+              {"id": 40, "quantity": "2 - 3 öntet Angostura bitter (pár csepp)"},
+              {"id": 41, "quantity": "1 - 2 öntet cseresznyelikőr (pár csepp)"},
+              {"id": 28, "quantity": "1 - 2 db jégkocka"},
+              {"id": 30, "quantity": "40ml"}
+            ]
+          }
+        ]
+}
