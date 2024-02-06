@@ -23,6 +23,3 @@ npm install -g @angular/cli
 
 # Ng-Bootstrap telepítése
 ng add @ng-bootstrap/ng-bootstrap
-
-"# DrinkIsland" 
-"# DrinkIsland" 
