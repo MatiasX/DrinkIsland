@@ -1,14 +1,13 @@
 <div class="container mt-4">
     <div class="row">
       <div class="col-12">
-        <h2 class="mb-4">Hozzávalók</h2>
+        <h2 class="mb-4">Alapanyagok:</h2>
       </div>
       <div class="col-12 col-md-6 col-lg-4" *ngFor="let ingredient of ingredients">
         <div class="card mb-3">
-          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Placeholder Image">
           <div class="card-body">
             <h5 class="card-title">{{ ingredient.name }}</h5>
-            <p class="card-text">ID: {{ ingredient.id }}</p>
+            <!-- <p class="card-text">ID: {{ ingredient.id }}</p> -->
           </div>
         </div>
       </div>
