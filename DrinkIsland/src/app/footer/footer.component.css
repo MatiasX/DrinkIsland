@@ -1,0 +1,38 @@
+.gjs-link {
+  max-width: 100%;
+  display:block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease 0s;
+  text-align: center;
+}
+
+.gjs-link:hover {
+  background-color: red;
+}
+
+#foti {
+  display: flex;
+  gap: 30px;
+  flex: 0 1 auto;
+  justify-content: center;
+  flex-basis: 1auto;
+  width: 60%;
+  margin-left: 20%;
+  
+}
+
+#megjegyzes {
+  text-align: left;
+  float: left;
+  opacity: 75%;
+  color: rgba(0, 0, 0, 1);
+  width: 50%;
+  padding-top: 5px;
+  font-size: 1.1rem;
+}
+
+#Picture_footer {
+  color: black;
+}
+  

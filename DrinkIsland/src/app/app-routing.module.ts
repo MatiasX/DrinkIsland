@@ -9,6 +9,9 @@ import { NonAlcoholicDrinksComponent } from './recipes/non-alcoholic-drinks/non-
 import { DetailedSearchComponent } from './recipes/detailed-search/detailed-search.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { LoginsignupComponent } from './loginsignup/loginsignup.component';
+import { SupportComponent } from './support/support.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +21,8 @@ const routes: Routes = [
   { path: 'recipes/detailed-search', component: DetailedSearchComponent },
   { path: 'ingredients', component: IngredientsComponent },
   { path: 'calculator', component: CalculatorComponent },
+  { path: 'loginsignup', component: LoginsignupComponent },
+  { path: 'support', component: SupportComponent },
 ];
 
 @NgModule({

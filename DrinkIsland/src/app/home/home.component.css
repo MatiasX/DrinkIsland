@@ -1,24 +1,112 @@
-.container-background {
-  background: url('/assets/animebar.jpeg') center center no-repeat fixed;
-  background-size: cover;
-  position: relative;
-  height: 100vh;
-}
-.container-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  filter: blur(5px);
+body{
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5); 
-  padding: 20px;
-  color: white; 
+h1 {
+  font-size: 3rem;
+}
+
+#Main_title {
+  max-width: 1200px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#feature-section {
+  justify-content: center;
+  padding: 80px 20px 80px 20px;
+}
+
+#Tovább {
+  justify-content: center;
+  padding: 80px 20px 80px 20px;
+}
+
+#introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#Ízelítő {
+  padding: 10px;
+  max-width: 750px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#További_ízelítő {
+  padding: 10px;
+  max-width: 750px;
+  margin-bottom: 70px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.Részletező {
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.Koktél-ikonok {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  vertical-align: middle;
+  fill: currentColor;
+  width: 50px;
+  height: 50px;
+}
+
+.Koktél-ikonok.koktél-ikon-kinézet {
+  padding: 10px;
+  background-color: #4de1ff;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 5px 0 rgba(0,0,0,.19);
+}
+
+.nyomógomb {
+  vertical-align: top;
+  max-width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: rgb(36, 99, 235);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.nyomógomb:hover{
+  background-color: red;
+}
+
+img{
+  color: black;
+  border-radius: 35px;
+  max-width: 100%;
+}
+
+.sectionRowClass {
+  display: flex;
+}
+
+.sectionColClass {
+  flex: 1 1 0%;
+}
+
+
+.sectionColClass.feature-item {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 30%;
 }

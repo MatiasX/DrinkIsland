@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AlcoholicDrinksComponent } from './recipes/alcoholic-drinks/alcoholic-drinks.component';
 import { NonAlcoholicDrinksComponent } from './recipes/non-alcoholic-drinks/non-alcoholic-drinks.component';
 import { DetailedSearchComponent } from './recipes/detailed-search/detailed-search.component';
+import { LoginsignupComponent } from './loginsignup/loginsignup.component';
+import { SupportComponent } from './support/support.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { DetailedSearchComponent } from './recipes/detailed-search/detailed-sear
     AlcoholicDrinksComponent,
     NonAlcoholicDrinksComponent,
     DetailedSearchComponent,
+    LoginsignupComponent,
+    SupportComponent,
   ],
   imports: [
     NgbModule,

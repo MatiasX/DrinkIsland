@@ -22,7 +22,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.3.2",
     "jquery": "^3.7.1",
-    "ng-bootstrap": "^1.6.3",
+    "ng-bootstrap": "^1.1.16",
     "ngmodel": "^1.0.3",
     "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
