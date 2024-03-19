@@ -8,12 +8,12 @@
 <body>
 
 
-    <div class="container">
+    <div id="loginForm" class="container">
         <form action="">
             <h1>
                 Bejelentkezés
             </h1>
-            
+
             <div class="input-box">
                 <input type="text" placeholder="Username" required>
             </div>
@@ -38,6 +38,42 @@
                 </p>
             </div>
         </form>
+    </div>
+
+    <div id="registerForm" class="container">
+      <form action="">
+        <h1>
+            Regisztráció
+        </h1>
+
+        <div class="input-box">
+            <input type="text" placeholder="Username" required>
+        </div>
+
+        <div class="input-box">
+            <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="password" required>
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Confirm password" required>
+        </div>
+
+        <button
+            type="submit" class="btn">Regisztráció
+        </button>
+
+        <div class="Login_link">
+            <p>
+                Van már fiókod?
+                <a href="#">Bejelentkezés</a>
+            </p>
+        </div>
+    </form>
+
     </div>
 
 </body>

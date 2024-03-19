@@ -1,7 +1,8 @@
+<div class="test_body">
 <div class="container">
   <h1>Alkohol kitisztulási idő kalkulátor</h1>
   <form (ngSubmit)="calculate()">
-    <label for="weight">Súly (kg): </label>
+    <label for="weight">Tömeg (kg): </label>
     <input type="number" id="weight" [(ngModel)]="weight" name="weight" required>
 
     <label for="gender">Nem: </label>
@@ -25,4 +26,5 @@
   <div *ngIf="result !== undefined">
     <p>Az alkohol kitisztulási várható idő: {{ result | number: '1.2-2' }} óra.</p>
   </div>
+</div>
 </div>

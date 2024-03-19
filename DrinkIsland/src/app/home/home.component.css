@@ -1,23 +1,39 @@
 body{
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
-  width: 100%;
-  background-color: red;
 }
 
 h1 {
   font-size: 3rem;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 #Main_title {
-  max-width: 1200px;
+
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 1000px;
+  width: 100%;
+  background: url(../../assets/img/iw.jpg);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
 }
 
+#Main_title p{
+  color: #fff;
+  font-size: 20px;
+  margin-top: 0;
+  padding: 0;
+}
+
+.Main_down{
+  background-color: blue;
+}
 #feature-section {
   justify-content: center;
   padding: 80px 20px 80px 20px;
