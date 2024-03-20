@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-
-
-    <div id="loginForm" class="container">
+<div class="whole">
+<div id="loginForm" class="container">
         <form action="">
             <h1>
                 Bejelentkezés
             </h1>
 
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Felhasználónév" required>
             </div>
 
             <div class="input-box">
-                <input type="password" placeholder="password" required>
+                <input type="password" placeholder="jelszó" required>
             </div>
 
             <div class="forgot">
@@ -34,47 +25,9 @@
             <div class="register_link">
                 <p>
                     Még nincs fiókod?
-                    <a href="#">Regisztráció</a>
+                    <a routerLink="/justsignup">Regisztráció</a>
                 </p>
             </div>
         </form>
     </div>
-
-    <div id="registerForm" class="container">
-      <form action="">
-        <h1>
-            Regisztráció
-        </h1>
-
-        <div class="input-box">
-            <input type="text" placeholder="Username" required>
-        </div>
-
-        <div class="input-box">
-            <input type="email" placeholder="Email" required>
-        </div>
-
-        <div class="input-box">
-            <input type="password" placeholder="password" required>
-        </div>
-
-        <div class="input-box">
-            <input type="password" placeholder="Confirm password" required>
-        </div>
-
-        <button
-            type="submit" class="btn">Regisztráció
-        </button>
-
-        <div class="Login_link">
-            <p>
-                Van már fiókod?
-                <a href="#">Bejelentkezés</a>
-            </p>
-        </div>
-    </form>
-
-    </div>
-
-</body>
-</html>
+</div>

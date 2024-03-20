@@ -17,6 +17,7 @@ import { NonAlcoholicDrinksComponent } from './recipes/non-alcoholic-drinks/non-
 import { DetailedSearchComponent } from './recipes/detailed-search/detailed-search.component';
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 import { SupportComponent } from './support/support.component';
+import { JustsignupComponent } from './justsignup/justsignup.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SupportComponent } from './support/support.component';
     DetailedSearchComponent,
     LoginsignupComponent,
     SupportComponent,
+    JustsignupComponent,
   ],
   imports: [
     NgbModule,

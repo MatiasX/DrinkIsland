@@ -1,34 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
 body{
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  animation: transitionIn 0.75s;
+}
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-h1 {
-  font-size: 3rem;
+#Main_title h1 {
+  font-size: 160px;
   color: #fff;
+  font-weight: 600;
   margin: 0;
   padding: 0;
+  transition: 0.5s;
+  font-family: "Birthstone Bounce", cursive;
+  font-style: normal;
+}
+
+#Main_title h1:hover{
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
 }
 
 #Main_title {
-
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 1000px;
+  height: 100vh;
   width: 100%;
   background: url(../../assets/img/iw.jpg);
   background-position: center;
   background-size: cover;
+  flex-direction: column;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 #Main_title p{
   color: #fff;
-  font-size: 20px;
+  font-size: 50px;
   margin-top: 0;
   padding: 0;
+  display: inline-block;
+  font-family: "Birthstone Bounce", cursive;
 }
 
 .Main_down{

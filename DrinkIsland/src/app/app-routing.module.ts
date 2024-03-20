@@ -10,6 +10,7 @@ import { DetailedSearchComponent } from './recipes/detailed-search/detailed-sear
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
+import { JustsignupComponent } from './justsignup/justsignup.component';
 import { SupportComponent } from './support/support.component';
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'ingredients', component: IngredientsComponent },
   { path: 'calculator', component: CalculatorComponent },
   { path: 'loginsignup', component: LoginsignupComponent },
+  { path: 'justsignup', component: JustsignupComponent },
   { path: 'support', component: SupportComponent },
 ];
 
