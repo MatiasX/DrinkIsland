@@ -1,15 +1,15 @@
 *{
   box-sizing: border-box;
-  color: #fff;
+  color: #570000;
 }
 .navbar {
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   z-index: 1000;
   align-items: center;
   background: transparent;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(20px);
 }
 
 .navbar-brand {
@@ -37,7 +37,7 @@
   padding: 0.5rem 0;
   margin: 0;
   list-style: none;
-  background-color: #ffffff;
+  background-color: whitesmoke;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -63,4 +63,53 @@
 .collapse:hover{
   text-decoration: none;
   color:#fff;
+}
+
+/* A navbar toggler ikon színe */
+.navbar-toggler-icon {
+  background-color: #fff; /* alapértelmezett háttérszín */
+  border: 1px solid #fff; /* alapértelmezett keret */
+  width: 24px; /* alapértelmezett szélesség */
+  height: 2px; /* alapértelmezett magasság */
+}
+
+/* A navbar toggler ikon vonalainak színe */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  background-color: #fff; /* alapértelmezett vonalszín */
+}
+
+/* A navbar toggler ikon méretének állítása */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  width: 24px; /* alapértelmezett szélesség */
+  height: 2px; /* alapértelmezett magasság */
+}
+/* Alapértelmezett stílus a zárt ikonhoz */
+.closed-icon {
+  display: inline-block;
+}
+
+/* Alapértelmezett stílus az nyitott ikonhoz */
+.opened-icon {
+  display: none;
+}
+
+/* Nyitott állapot stílusa */
+.navbar-toggler.opened .closed-icon {
+  display: none;
+}
+
+.navbar-toggler.opened .opened-icon {
+  display: inline-block;
+}
+hr {
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 20px ;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 1px;
+  color: darkgray;
 }

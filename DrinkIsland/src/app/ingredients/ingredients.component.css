@@ -1,12 +1,13 @@
 .anyam{
+    background-color: aqua;
   width: 100%;
-  height: 400px;
+  height: 20px;
 }
 /* Kártyák formázása */
 .card {
-    background-color: green;
+    background-color: white;
     margin-bottom: 20px;
-    border: 10px solid rgba(255, 0, 0, 0.125);
+    border: 5px solid white;
     border-radius: 0.25rem;
     margin-top: 30px;
 }

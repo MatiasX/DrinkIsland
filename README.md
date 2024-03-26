@@ -1,6 +1,7 @@
 # DrinkIsland
 
-A DrinkIsland egy webalkalmazás, amely koktél recepteket, hozzávalókról érdekességeket kínál.
+A DrinkIsland egy webalkalmazás, amely koktél recepteket, 
+hozzávalókról érdekességeket és egyéb témához tartozó funkciókat kínál.
 
 ## Indítás
 
@@ -19,7 +20,10 @@ telepítsd a függőségeket:
 
 ```bash
 # Angular telepítse
-npm install -g @angular/cli
+npm i
 
 # Ng-Bootstrap telepítése
 ng add @ng-bootstrap/ng-bootstrap
+
+# Futtatás
+ng serve -o
