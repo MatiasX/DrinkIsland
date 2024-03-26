@@ -15,6 +15,7 @@
 .navbar-brand {
   margin-right: 2rem;
   font-size: 30px;
+  color: #fff;
 }
 
 .navbar-nav {
@@ -26,8 +27,11 @@
 
 .nav-item {
   margin-right: 1rem;
+  color:#fff;
 }
-
+.nav-item:hover {
+  color: #fff;
+}
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -37,7 +41,11 @@
   padding: 0.5rem 0;
   margin: 0;
   list-style: none;
+<<<<<<< HEAD
   background-color: whitesmoke;
+=======
+  background-color: #fff;
+>>>>>>> 44726783882ae1f7b9b716a3fb05dd940fc8a3d2
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -49,7 +57,7 @@
 }
 
 .dropdown-menu a:hover {
-  background-color: #f0f0f0;
+  color: #f0f0f0;
 }
 
 .right_side{
@@ -60,9 +68,9 @@
   padding-top: 20px;
 }
 
-.collapse:hover{
-  text-decoration: none;
-  color:#fff;
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+  color: #fff;
 }
 
 /* A navbar toggler ikon színe */
