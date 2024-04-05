@@ -17,7 +17,15 @@ export class HomeComponent implements OnInit {
       const prevButton = document.getElementById('prev') as HTMLButtonElement;
       const nextButton = document.getElementById('next') as HTMLButtonElement;
 
+      const items = document.querySelectorAll<HTMLElement>('.slider02 .list .item');
+      const thumbnails = document.querySelectorAll<HTMLElement>('.thumbnail .item');
+      const next02 = document.getElementById('next02') as HTMLButtonElement;
+      const prev02 = document.getElementById('prev02') as HTMLButtonElement;
+
       let currentIndex = 0;
+      let countItem = items.length;
+      let itemActive = 0;
+      let refreshInterval: any;
 
       // Function to show the current slide
       function showSlide(index: number) {
@@ -47,6 +55,51 @@ export class HomeComponent implements OnInit {
 
       // Show initial slide
       showSlide(currentIndex);
+
+      next02.onclick = function(){
+        itemActive = itemActive + 1;
+        if(itemActive >= countItem){
+            itemActive = 0;
+        }
+        showSlider();
+      }
+  
+      prev02.onclick = function(){
+        itemActive = itemActive - 1;
+        if(itemActive < 0){
+            itemActive = countItem - 1;
+        }
+        showSlider();
+      }
+  
+      refreshInterval = setInterval(() => {
+        next02.click();
+      }, 7000);
+  
+      function showSlider(){
+        let itemActiveOld = document.querySelector<HTMLElement>('.slider02 .list .item.active');
+        let thumbnailActiveOld = document.querySelector<HTMLElement>('.thumbnail .item.active');
+        itemActiveOld!.classList.remove('active');
+        thumbnailActiveOld!.classList.remove('active');
+  
+        items[itemActive].classList.add('active');
+        thumbnails[itemActive].classList.add('active');
+  
+        clearInterval(refreshInterval);
+        refreshInterval = setInterval(() => {
+          next02.click();
+        }, 7000);
+      }
+  
+      thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+          itemActive = index;
+          showSlider();
+        })
+      });
+
+
+      
     });
   }
 }

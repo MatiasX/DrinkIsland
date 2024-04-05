@@ -230,6 +230,11 @@ body{
   font-family: "Birthstone Bounce", cursive;
 }
 
+
+.nelegyelfeher{
+  background:url("../../assets/img/background_second.jpg");
+}
+
 .slider02{
   width: 70%;
   height: 100vh;
@@ -257,7 +262,7 @@ body{
   left: 0;
   bottom: 0;
   background-image: linear-gradient(
-      to top, #000 40%, transparent
+      to top, #000 20%, transparent
   );
 }
 .slider02 .list .item .content{
@@ -370,31 +375,16 @@ body{
   }
 }
 
-.Main_down{
-  background-color: blue;
-}
-#feature-section {
-  justify-content: center;
-  padding: 80px 20px 80px 20px;
-}
+
+
 
 #Tovább {
-  justify-content: center;
-  padding: 80px 20px 80px 20px;
-}
-
-#introduce {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-#Ízelítő {
-  padding: 10px;
-  max-width: 750px;
-  padding-left: 0px;
-  padding-right: 0px;
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 40px;
+  background-color: black;
+  color: white;
 }
 
 #További_ízelítő {
@@ -403,8 +393,17 @@ body{
   margin-bottom: 70px;
   padding-left: 0px;
   padding-right: 0px;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
 }
 
+#További_ízelítő h2{
+  text-align: center;
+}
+#További_ízelítő p{
+  text-align: center;
+}
 .Részletező {
   padding: 10px;
   padding-left: 0px;
@@ -429,37 +428,9 @@ body{
   box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 5px 0 rgba(0,0,0,.19);
 }
 
-.nyomógomb {
-  vertical-align: top;
-  max-width: 100%;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  background-color: rgb(36, 99, 235);
-  border-radius: 5px;
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-.nyomógomb:hover{
-  background-color: red;
-}
-
-img{
-  color: black;
-  border-radius: 35px;
-  max-width: 100%;
-}
-
 .sectionRowClass {
   display: flex;
 }
-
-.sectionColClass {
-  flex: 1 1 0%;
-}
-
 
 .sectionColClass.feature-item {
   padding: 15px;
