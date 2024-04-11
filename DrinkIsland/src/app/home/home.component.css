@@ -278,8 +278,12 @@ body{
   letter-spacing: 10px;
 }
 .slider02 .list .item .content h2{
-  font-size: 100px;
-  margin: 0;
+  font-size: 70px;
+  margin-top: 40px;
+}
+
+.slider02 .list .item .content p{
+  margin-top: 25px;
 }
 .slider02 .list .item.active{
   opacity: 1;

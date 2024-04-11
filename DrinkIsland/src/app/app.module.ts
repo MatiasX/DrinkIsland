@@ -18,7 +18,6 @@ import { DetailedSearchComponent } from './recipes/detailed-search/detailed-sear
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 import { SupportComponent } from './support/support.component';
 import { JustsignupComponent } from './justsignup/justsignup.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -41,8 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
