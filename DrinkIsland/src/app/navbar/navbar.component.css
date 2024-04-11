@@ -1,119 +1,50 @@
-*{
-  box-sizing: border-box;
-  color: #570000;
-}
+/* Navbar */
+
 .navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  align-items: center;
-  background: transparent;
-  backdrop-filter: blur(20px);
+  background-color: #f7f7f7; /* Sötét háttér */
+  display: b;
 }
 
 .navbar-brand {
-  margin-right: 2rem;
-  font-size: 30px;
-  color: #fff;
+  font-size: 1.5rem; /* Név mérete */
 }
 
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-top: 0;
+.navbar-toggler {
+  border: none; /* Gomb kerete */
 }
 
-.nav-item {
-  margin-right: 1rem;
-  color:#fff;
+.navbar-toggler:focus {
+  outline: none; /* Fókuszkeret */
 }
-.nav-item:hover {
-  color: #fff;
+
+.navbar-toggler-icon {
+  color: #fff; /* Menü ikon színe */
 }
+
+.navbar-nav .nav-link {
+  color: #62aed4; /* Menü elem színe */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ddff; /* Hover szín */
+}
+
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0;
-  list-style: none;
-  background-color: whitesmoke;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  background-color: #343a40; /* Dropdown háttérszín */
 }
 
 .dropdown-menu a {
-  display: block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
+  color: #fff; /* Dropdown elem színe */
 }
 
 .dropdown-menu a:hover {
-  color: #f0f0f0;
+  background-color: #126471; /* Hover szín */
 }
 
-.right_side{
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  list-style: none;
-  padding-top: 20px;
+.right_side .nav-link {
+  color: #fff; /* Jobboldali menü elem színe */
 }
 
-.navbar-nav .nav-item .nav-link:hover,
-.navbar-nav .nav-item .nav-link:focus {
-  color: #fff;
-}
-
-/* A navbar toggler ikon színe */
-.navbar-toggler-icon {
-  background-color: #fff; /* alapértelmezett háttérszín */
-  border: 1px solid #fff; /* alapértelmezett keret */
-  width: 24px; /* alapértelmezett szélesség */
-  height: 2px; /* alapértelmezett magasság */
-}
-
-/* A navbar toggler ikon vonalainak színe */
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  background-color: #fff; /* alapértelmezett vonalszín */
-}
-
-/* A navbar toggler ikon méretének állítása */
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  width: 24px; /* alapértelmezett szélesség */
-  height: 2px; /* alapértelmezett magasság */
-}
-/* Alapértelmezett stílus a zárt ikonhoz */
-.closed-icon {
-  display: inline-block;
-}
-
-/* Alapértelmezett stílus az nyitott ikonhoz */
-.opened-icon {
-  display: none;
-}
-
-/* Nyitott állapot stílusa */
-.navbar-toggler.opened .closed-icon {
-  display: none;
-}
-
-.navbar-toggler.opened .opened-icon {
-  display: inline-block;
-}
-hr {
-  display: block;
-  margin-top: 1.5em;
-  margin-bottom: 20px ;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: solid;
-  border-width: 1px;
-  color: darkgray;
+.right_side .nav-link:hover {
+  color: #04deff; /* Hover szín */
 }
