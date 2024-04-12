@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-detailed-search',
   templateUrl: './detailed-search.component.html',
   styleUrls: ['./detailed-search.component.css']
 })
-export class DetailedSearchComponent {
+export class DetailedSearchComponent implements OnInit {
+  searchQuery: string = '';
+  cocktails: any[] = [];
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }

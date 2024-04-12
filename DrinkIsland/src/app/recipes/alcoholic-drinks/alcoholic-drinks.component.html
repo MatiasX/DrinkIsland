@@ -1,20 +1,45 @@
-<h1 style="color: black; padding-top: 100px; text-align: center; font-size: 80px; height: 150px;">Koktélok</h1>
+<div class="idkbox"></div>
 
-<div class="row g-4">
-    <div *ngFor="let i of ingredients" class=" col-12 col-md-6 col-lg-4 col-xl-3">
-
-        <div class="card h-100">
-            <img src="../../../assets/img/Bloody_Mary.jpg" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">{{i.name}}</h5>
-              <p class="card-text">
-                ide jönne valami menő szöveg mindegyikről..
-              </p>
-            </div>
-            <button  type="button" class="btn btn-primary my-1">Töröl</button>
-            <button type="button" class="btn btn-primary my-1">Módosít</button>
-          </div>
-
-
+<div class="container">
+  <h1 class="text-center">Alkoholos koktélok</h1>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <!-- <img src="assets/img/margarita.jpg" class="card-img-top" alt="Margarita"> -->
+        <div class="card-body">
+          <h2 class="card-title">Margarita</h2>
+          <p class="card-text">Az egyik legnépszerűbb és legfrissítőbb koktél, ideális forró nyári napokra. A margarita
+            frissítő íze a tequilából, a triple secből és a friss lime levéből származik.</p>
+          <h3>Hozzávalók:</h3>
+          <p class="card-text">- 50ml Tequila<br>- 20ml Triple Sec<br>- 30ml Lime Juice<br>- Jégkocka</p>
+        </div>
+      </div>
     </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <!-- <img src="assets/img/mojito.jpg" class="card-img-top" alt="Mojito"> -->
+        <div class="card-body">
+          <h2 class="card-title">Mojito</h2>
+          <p class="card-text">A friss és mentás Mojito egy igazi nyári klasszikus. Frissítő íze a rum, a friss mentalevél,
+            a cukor, a szóda és a lime kombinációjából származik.</p>
+          <h3>Hozzávalók:</h3>
+          <p class="card-text">- 50ml Fehér rum<br>- 20ml Lime Juice<br>- 6 Friss mentalevél<br>- 2 Teáskanál Cukor<br>- Szóda<br>- Jégkocka</p>
+        </div>
+      </div>
+    </div>
+    <!-- További koktélok itt -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <!-- <img src="assets/img/cosmopolitan.jpg" class="card-img-top" alt="Cosmopolitan"> -->
+        <div class="card-body">
+          <h2 class="card-title">Cosmopolitan</h2>
+          <p class="card-text">A Cosmopolitan egy elegáns és friss koktél, amelyet gyakran hölgyek kedvelnek. A vodka,
+            a triple sec, az áfonyalé és a friss limelev egyensúlya teszi különlegessé.</p>
+          <h3>Recept:</h3>
+          <p class="card-text">- 40ml Vodka<br>- 15ml Triple Sec<br>- 30ml Áfonyalé<br>- 15ml Lime Juice<br>- Jégkocka</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 </div>
