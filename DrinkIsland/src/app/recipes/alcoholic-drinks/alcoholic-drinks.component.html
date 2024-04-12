@@ -1,1 +1,20 @@
-<p>aha</p>
+<h1 style="color: black; padding-top: 100px; text-align: center; font-size: 80px; height: 150px;">Koktélok</h1>
+
+<div class="row g-4">
+    <div *ngFor="let i of ingredients" class=" col-12 col-md-6 col-lg-4 col-xl-3">
+
+        <div class="card h-100">
+            <img src="../../../assets/img/Bloody_Mary.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{i.name}}</h5>
+              <p class="card-text">
+                ide jönne valami menő szöveg mindegyikről..
+              </p>
+            </div>
+            <button  type="button" class="btn btn-primary my-1">Töröl</button>
+            <button type="button" class="btn btn-primary my-1">Módosít</button>
+          </div>
+
+
+    </div>
+</div>

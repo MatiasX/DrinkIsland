@@ -12,8 +12,11 @@ body{
 }
 .container{
 	max-width: 1170px;
-	margin:auto;
+	width: 100%;
+	
+	height: auto;
 }
+
 .row{
 	display: flex;
 	flex-wrap: wrap;
@@ -23,7 +26,8 @@ ul{
 }
 .footer{
 	background-color: #24262b;
-    padding: 70px 0;
+    padding: 30px 0;
+	margin:0;
 }
 .footer-col{
    width: 25%;
@@ -50,6 +54,11 @@ ul{
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
+.footer-col ul {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+}
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
@@ -59,6 +68,7 @@ ul{
 	color: #bbbbbb;
 	display: block;
 	transition: all 0.3s ease;
+	
 }
 .footer-col ul li a:hover{
 	color: #ffffff;

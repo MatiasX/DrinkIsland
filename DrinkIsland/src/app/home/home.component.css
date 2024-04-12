@@ -89,15 +89,26 @@ body{
 }
 
 #slides .slide_2 {
-  background: #003459;
+  background: url(../../assets/img/slider2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 #slides .slide_3 {
-  background: #007EA7;
+  background-image: url(../../assets/img/cocktail.gif);
+  background-size: cover;
+  justify-content: center;
+  padding-top: 60px;
 }
 
 #slides .slide_4 {
   background: #00A8E8;
+  justify-content: center;
+  align-items: center;
 }
 
 #controls, #bullets {
@@ -212,7 +223,7 @@ body{
   font-size: 60px;
   color: #fff;
   font-weight: 600;
-  margin: 0;
+  margin-top: 40px;
   padding: 30px;
   transition: 0.5s;
   font-family: "Birthstone Bounce", cursive;
