@@ -27,3 +27,15 @@ ng add @ng-bootstrap/ng-bootstrap
 
 # Futtatás
 ng serve -o
+
+#Adatbázis létrehozása
+create database drinkisland;
+
+#táblák létrehozása (Laravel)
+php artisan migrate
+
+#adatok feltöltése a táblákba
+adatok.sql feltöltése az sql adatbázisba
+
+#Futtatás
+php artisan serve
