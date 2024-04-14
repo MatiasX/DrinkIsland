@@ -17,12 +17,46 @@ class ItalController extends Controller
         $ital->save();
         return response()->json(['message'=>'Ital sikeresen hozzáadva', 'data'=>$ital], 201);
     }
-    public function getItal(Request $ital){
-        $current=Ital::where("name",$ital->input('name'))->first();
-        return $current->id;
+    public function getItalByName(Request $italNeve){
+        $name=$italNeve->name;
+        $ital = DB::table('italok')->where("name",$name)->get();
+        return $ital;
+    }
+
+    public function getItalById(Request $italId){
+        $id=$italId->id;
+        $ital = DB::table('italok')->where('id',$id)->get();
+        return $ital;
     }
     public function getItalok(){
         $italok = DB::table('italok')->get();
         return response()->json($italok);
     }
+
+    /*public function modifyItal(Request $request){
+        $id=0;
+    }
+
+
+    public function modifyType(Request $request){
+        $id = $request->get("id");
+        $type = Type::find($id);
+        $type->type = $request->get("type");
+        $type->save();
+        if (is_null($type)) {
+            return $this->sendError("hiba a bejövő paraméterekben","Nincs ilyen Type");
+        }
+        return $this->sendResponse($type, "Módosítva");
+    }
+    
+    public function destroyType(Request $request){
+        
+        $type = Type::find($request->get("id"));
+        if (is_null($type)) {
+            return $this->sendError("hiba a bejövő paraméterekben","Nincs ilyen Type");
+        }else {
+            Type::destroy($type->id);
+            return $this->sendResponse($type, "Törölve");
+        }
+    }*/
 }

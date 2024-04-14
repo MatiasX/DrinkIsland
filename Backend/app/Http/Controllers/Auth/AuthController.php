@@ -13,14 +13,12 @@ class AuthController extends Controller
     public function register( Request $request ) {
         //return $request;
         $request->validate([
-            'name' => ['required'],
             'username' => ['required', 'max:50', 'unique:users'],
             'email' => ['required'],
             'password' => ['required'],
             'password_confirmation' => ['required','same:password']
         ],
         [
-            'name.required'=>"A név megadása kötelező!",
             'username.required'=>"A felhasználónévnév megadása kötelező!",
             'username.max'=>"A felhasználónévnév legfeljebb 50 karakter hosszú lehet!",
             'username.unique'=>"A felhasználónévnév már létezik!",
@@ -30,12 +28,11 @@ class AuthController extends Controller
             'password_confirmation.same'=>"A két jelszó nem egyezik!",
         ]);
         $input = $request->all();
-        $input[ "name" ] = $request->get("name");
         $input[ "username" ] = $request->get("username");
         $input[ "email" ] = $request->get("email");
         $input[ "password" ] = $request->get("password");
         $user = User::create( $input );
-        $success[ "name" ] = $user->name;
+        $success[ "username" ] = $user->username;
 
         return response()->json([ "message" => "Sikeres regisztráció",
                                   "success" => $success ]);

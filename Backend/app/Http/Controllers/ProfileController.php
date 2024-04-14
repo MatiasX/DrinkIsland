@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function getUserProfileData() {
         $user = Auth::user();
-        return response()->json(['user' => $user]);
+        return response()->json(['username' => $user]);
     }
 
     public function setNewPassword(Request $request) {

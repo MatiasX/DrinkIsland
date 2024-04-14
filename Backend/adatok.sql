@@ -45,16 +45,16 @@ INSERT INTO `alapanyagok` (`id`, `name`) VALUES
 
 
 INSERT INTO `italok` (`id`, `name`) VALUES
-(1, ' "PINA" COLADA '),
-(2, ' MAI TAI '),
-(3, ' Mojito '),
-(4, ' APEROL SPRITZ '),
-(5, ' Margarita '),
-(6, ' Manhattan '),
-(7, ' WHISKY SOUR  '),
-(8, ' Negroni '),
-(9, ' old fashioned '),
-(10, ' Daiquiri '),
+(1, '"PINA" COLADA'),
+(2, 'MAI TAI'),
+(3, 'Mojito'),
+(4, 'APEROL SPRITZ'),
+(5, 'Margarita'),
+(6, 'Manhattan'),
+(7, 'WHISKY SOUR'),
+(8, 'Negroni'),
+(9, 'old fashioned'),
+(10, 'Daiquiri'),
 (11, 'Bloody Mary');
 
 
