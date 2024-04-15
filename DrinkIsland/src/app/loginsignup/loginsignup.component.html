@@ -1,33 +1,21 @@
 <div class="whole">
-<div id="loginForm" class="container">
-        <form action="">
-            <h1>
-                Bejelentkezés
-            </h1>
-
-            <div class="input-box">
-                <input type="text" placeholder="Felhasználónév" required>
-            </div>
-
-            <div class="input-box">
-                <input type="password" placeholder="jelszó" required>
-            </div>
-
-            <div class="forgot">
-                <label>
-                    <input type="checkbox"> Emlékezz rám! :3
-                </label>
-                <a href="#"> Elfelejtett jelszó </a>
-            </div>
-
-            <button type="submit" class="btn">Bejelentkezés</button>
-
-            <div class="register_link">
-                <p>
-                    Még nincs fiókod?
-                    <a routerLink="/justsignup">Regisztráció</a>
-                </p>
-            </div>
-        </form>
+    <div id="loginForm" class="container">
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+          <h1>
+              Bejelentkezés
+          </h1>      
+          
+          <div class="input-box">
+            <input formControlName="username" type="text" placeholder="Felhasználónév" required>
+          </div>
+    
+          <div class="input-box">
+            <input formControlName="password" type="password" placeholder="Jelszó" required>
+          </div>
+    
+          <button
+              type="submit" class="btn">Bejelentkezés
+          </button>
+      </form>
     </div>
-</div>
+    </div>

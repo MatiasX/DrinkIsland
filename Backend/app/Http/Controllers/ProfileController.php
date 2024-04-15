@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -25,6 +26,23 @@ class ProfileController extends Controller
         ]);
         $user->save();
         return response()->json(['message' => 'Jelszó megváltoztatva']);
+    }
+
+    public function setAdmin(Request $request) {
+        $request -> validate([
+            'username' => 'required'
+        ],[
+            'username.required'=>"A felhasználónév megadása kötelező!"
+        ]);
+        $user = User::where('username', $request->username)->first();
+        if (is_null($user)) {
+            return response()->json(['message' => 'Nincs ilyen felhasználónevű user.', 'username' => $request->username]);
+        }else{
+            $user->is_admin = true;
+            $user->save();
+            return response()->json(['message' => 'Admin jog hozzáadva.']);
+        }
+                
     }
 
     public function deleteAccount() {

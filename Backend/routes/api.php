@@ -25,19 +25,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/addAlapanyag', [AlapanyagController::class, 'addAlapanyag']);
 Route::get('/getAlapanyagByName', [AlapanyagController::class, 'getAlapanyagByName']);
 Route::get('/getAlapanyagById', [AlapanyagController::class, 'getAlapanyagById']);
 Route::get('/getAlapanyagok', [AlapanyagController::class, 'getAlapanyagok']);
-Route::put('/modifyAlapanyag', [AlapanyagController::class, 'modifyAlapanyag']);
-Route::delete('/deleteAlapanyag', [AlapanyagController::class, 'deleteAlapanyag']);
 
-Route::post('/addItal', [ItalController::class, 'addItal']);
+
+
 Route::get('/getItalByName', [ItalController::class, 'getItalByName']);
 Route::get('/getItalById', [ItalController::class, 'getItalById']);
 Route::get('/getItalok', [ItalController::class, 'getItalok']);
-Route::put('/modifyItal', [ItalController::class, 'modifyItal']);
-Route::delete('/deleteItal', [ItalController::class, 'deleteItal']);
+
 
 
 //http://localhost:8000/api/getAlkoholmentes
@@ -53,15 +50,12 @@ Route::get('/getReceptByName', [KoktelController::class, 'getReceptByName']);
 
 Route::get('/getTipusByItalId', [TipusController::class, 'getTipusByItalId']);
 Route::get('/getTipusok', [TipusController::class, 'getTipusok']);
-Route::post('/addTipus', [TipusController::class, 'addTipus']);
-Route::put('/modifyTipus', [TipusController::class, 'modifyTipus']);
-Route::delete('/deleteTipus', [TipusController::class, 'deleteTipus']);
+
 //Route::delete('/deleteTipusByItalId', [TipusController::class, 'deleteTipusByItalId']);
 
-Route::post('/addRecept', [ReceptController::class, 'addRecept']);
+
 Route::get('/getReceptByAlapanyagId', [ReceptController::class, 'getReceptByAlapanyagId']);
-Route::put('/modifyRecept', [ReceptController::class, 'modifyRecept']);
-Route::delete('/deleteRecept', [ReceptController::class, 'deleteRecept']);
+
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -72,4 +66,20 @@ Route::group(["middleware"=>"auth:sanctum"], function(){
     Route::get('/getUserProfileData', [ProfileController::class, 'getUserProfileData']);
     Route::put('/setNewPassword', [ProfileController::class, 'setNewPassword']);
     Route::delete('/deleteAccount', [ProfileController::class, 'deleteAccount']);
+    Route::group(["middleware"=>"admin"], function(){
+        Route::put('/setAdmin', [ProfileController::class, 'setAdmin']);
+        
+        Route::post('/addAlapanyag', [AlapanyagController::class, 'addAlapanyag']);
+        Route::put('/modifyAlapanyag', [AlapanyagController::class, 'modifyAlapanyag']);
+        Route::delete('/deleteAlapanyag', [AlapanyagController::class, 'deleteAlapanyag']);
+        Route::post('/addItal', [ItalController::class, 'addItal']);
+        Route::put('/modifyItal', [ItalController::class, 'modifyItal']);
+        Route::delete('/deleteItal', [ItalController::class, 'deleteItal']);
+        Route::post('/addTipus', [TipusController::class, 'addTipus']);
+        Route::put('/modifyTipus', [TipusController::class, 'modifyTipus']);
+        Route::delete('/deleteTipus', [TipusController::class, 'deleteTipus']);
+        Route::post('/addRecept', [ReceptController::class, 'addRecept']);
+        Route::put('/modifyRecept', [ReceptController::class, 'modifyRecept']);
+        Route::delete('/deleteRecept', [ReceptController::class, 'deleteRecept']);
+    });
 });

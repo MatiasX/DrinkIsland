@@ -1,9 +1,5 @@
-
-.idkbox{
-    background-color: rgb(38, 72, 72);
-    width: 100%;
-    height: 55px;
-    display: flex;
+.body{
+    padding: 100px 0;
 }
 /* Kártyák formázása */
 .card {

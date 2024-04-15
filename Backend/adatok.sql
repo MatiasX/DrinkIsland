@@ -140,3 +140,6 @@ INSERT INTO `tipus` (`ital_id`, `teli`, `nyari`, `edes`, `savanyu`, `keseru`, `a
 (10, 0, 1, 1, 1, 0, 1, 0),
 (11, 0, 1, 1, 1, 1, 1, 0),
 (12, 0, 1, 1, 1, 0, 0, 1);
+
+
+/*UPDATE users SET is_admin=1 WHERE id=1;*/
