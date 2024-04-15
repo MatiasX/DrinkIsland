@@ -29,10 +29,10 @@ const routes: Routes = [
   { path: 'loginsignup', component: LoginsignupComponent },
   { path: 'justsignup', component: JustsignupComponent },
   { path: 'support', component: SupportComponent },
-  { path: 'alapanyag', component: AlapanyagComponent },
-  { path: 'ital', component: ItalComponent },
-  { path: 'recept', component: ReceptComponent },
-  { path: 'user', component: UserComponent },
+  { path: 'admin/alapanyag', component: AlapanyagComponent },
+  { path: 'admin/ital', component: ItalComponent },
+  { path: 'admin/recept', component: ReceptComponent },
+  { path: 'admin/user', component: UserComponent },
 ];
 
 @NgModule({
