@@ -15,13 +15,19 @@ export class JustsignupComponent {
       username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
-      confirmPassword: ['', Validators.required]
+      password_confirmation: ['', Validators.required]
     });
   }
 
   onSubmit(): void {
     if (this.registrationForm.valid) {
-      const userData = this.registrationForm.value;
+      const userData = {
+        username: this.registrationForm.value.username,
+        email: this.registrationForm.value.email,
+        password: this.registrationForm.value.password,
+        password_confirmation: this.registrationForm.value.password_confirmation
+      };
+
       this.registrationService.register(userData).subscribe(
         response => {
           // Handle success response from backend
