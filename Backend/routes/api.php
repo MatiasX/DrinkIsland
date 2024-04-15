@@ -69,6 +69,11 @@ Route::group(["middleware"=>"auth:sanctum"], function(){
     Route::group(["middleware"=>"admin"], function(){
         Route::put('/setAdmin', [ProfileController::class, 'setAdmin']);
         
+        
+    });
+});
+
+
         Route::post('/addAlapanyag', [AlapanyagController::class, 'addAlapanyag']);
         Route::put('/modifyAlapanyag', [AlapanyagController::class, 'modifyAlapanyag']);
         Route::delete('/deleteAlapanyag', [AlapanyagController::class, 'deleteAlapanyag']);
@@ -81,5 +86,3 @@ Route::group(["middleware"=>"auth:sanctum"], function(){
         Route::post('/addRecept', [ReceptController::class, 'addRecept']);
         Route::put('/modifyRecept', [ReceptController::class, 'modifyRecept']);
         Route::delete('/deleteRecept', [ReceptController::class, 'deleteRecept']);
-    });
-});

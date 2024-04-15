@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-detailed-search',
@@ -6,11 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detailed-search.component.css']
 })
 export class DetailedSearchComponent implements OnInit {
-  searchQuery: string = '';
-  cocktails: any[] = [];
 
-  constructor() { }
+  drinks: any;
 
+  constructor(private dataService: DataService) { }
+  
   ngOnInit(): void {
+    this.getDrinksData();
   }
+
+  getDrinksData() {
+    this.dataService.getData().subscribe(res => {
+      this.drinks = res;
+    })
+  }
+
+  insertData() {
+    console.log("ahoi");
+  }
+
 }
