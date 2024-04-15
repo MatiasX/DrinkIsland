@@ -18,6 +18,10 @@ import { DetailedSearchComponent } from './recipes/detailed-search/detailed-sear
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 import { SupportComponent } from './support/support.component';
 import { JustsignupComponent } from './justsignup/justsignup.component';
+import { AlapanyagComponent } from './admin/alapanyag/alapanyag.component';
+import { ItalComponent } from './admin/ital/ital.component';
+import { ReceptComponent } from './admin/recept/recept.component';
+import { UserComponent } from './admin/user/user.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { JustsignupComponent } from './justsignup/justsignup.component';
     DetailedSearchComponent,
     LoginsignupComponent,
     SupportComponent,
-    JustsignupComponent
+    JustsignupComponent,
+    AlapanyagComponent,
+    ItalComponent,
+    ReceptComponent,
+    UserComponent
   ],
   imports: [
     NgbModule,
