@@ -1,23 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-alcoholic-drinks',
   templateUrl: './alcoholic-drinks.component.html',
   styleUrls: ['./alcoholic-drinks.component.css']
 })
-export class AlcoholicDrinksComponent {
-  ingredients: any[] = [];
+export class AlcoholicDrinksComponent implements OnInit {
+  drinks:any;
+  
 
-  constructor(private http: HttpClient) { }
+  constructor(private dataService:DataService) { }
   ngOnInit(): void {
-    this.http.get<any>('assets/Coctails_Database.json').subscribe(data => {
-      this.ingredients = data.ingredients;
-    });
+    this.getDrinksData();
   }
-  getJsonData(): Observable<any> {
-    //return this.http.get<any>('DrinkIsland_main/Coctails_Database.json');
-    return this.http.get<any>("assets/Coctails_Database.json");
+
+  getDrinksData(){
+    this.dataService.getData().subscribe(res =>{
+      this.drinks = res;
+    })
+  }
+
+  insertData(){
+    console.log("ahoi");
   }
 }

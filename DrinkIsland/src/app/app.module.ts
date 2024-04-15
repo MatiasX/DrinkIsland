@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,6 +19,11 @@ import { DetailedSearchComponent } from './recipes/detailed-search/detailed-sear
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 import { SupportComponent } from './support/support.component';
 import { JustsignupComponent } from './justsignup/justsignup.component';
+
+
+const appRoutes: Routes = [
+  {path: '', component:AlcoholicDrinksComponent}
+];
 
 @NgModule({
   declarations: [
@@ -40,7 +46,8 @@ import { JustsignupComponent } from './justsignup/justsignup.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

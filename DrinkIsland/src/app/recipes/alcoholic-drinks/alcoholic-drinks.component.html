@@ -1,45 +1,48 @@
-<div class="idkbox"></div>
-
 <div class="container">
   <h1 class="text-center">Alkoholos koktélok</h1>
+
+  <form>
+
+    <div class="form-group">
+      <label for="name">Koktél neve</label>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="name">leírása</label>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Összetevői</label>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <button class="btn btn-dark btn-sm mt-4">beküldés</button>
+  </form>
   <div class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card h-100">
-        <!-- <img src="assets/img/margarita.jpg" class="card-img-top" alt="Margarita"> -->
-        <div class="card-body">
-          <h2 class="card-title">Margarita</h2>
-          <p class="card-text">Az egyik legnépszerűbb és legfrissítőbb koktél, ideális forró nyári napokra. A margarita
-            frissítő íze a tequilából, a triple secből és a friss lime levéből származik.</p>
-          <h3>Hozzávalók:</h3>
-          <p class="card-text">- 50ml Tequila<br>- 20ml Triple Sec<br>- 30ml Lime Juice<br>- Jégkocka</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card h-100">
-        <!-- <img src="assets/img/mojito.jpg" class="card-img-top" alt="Mojito"> -->
-        <div class="card-body">
-          <h2 class="card-title">Mojito</h2>
-          <p class="card-text">A friss és mentás Mojito egy igazi nyári klasszikus. Frissítő íze a rum, a friss mentalevél,
-            a cukor, a szóda és a lime kombinációjából származik.</p>
-          <h3>Hozzávalók:</h3>
-          <p class="card-text">- 50ml Fehér rum<br>- 20ml Lime Juice<br>- 6 Friss mentalevél<br>- 2 Teáskanál Cukor<br>- Szóda<br>- Jégkocka</p>
-        </div>
-      </div>
-    </div>
     <!-- További koktélok itt -->
+    <div *ngFor="let dri of drinks"  class="">
     <div class="col-md-4 mb-4">
       <div class="card h-100">
         <!-- <img src="assets/img/cosmopolitan.jpg" class="card-img-top" alt="Cosmopolitan"> -->
         <div class="card-body">
-          <h2 class="card-title">Cosmopolitan</h2>
-          <p class="card-text">A Cosmopolitan egy elegáns és friss koktél, amelyet gyakran hölgyek kedvelnek. A vodka,
-            a triple sec, az áfonyalé és a friss limelev egyensúlya teszi különlegessé.</p>
+          <h2 class="card-title">{{dri.Ital}}</h2>
+          <p class="card-text">Leírása az italoknak.</p>
+
           <h3>Recept:</h3>
-          <p class="card-text">- 40ml Vodka<br>- 15ml Triple Sec<br>- 30ml Áfonyalé<br>- 15ml Lime Juice<br>- Jégkocka</p>
+            <ul>
+              <li *ngFor="let ingredient of dri.Recept | keyvalue">
+                {{ ingredient.key }}: {{ ingredient.value }}
+              </li>
+            </ul>
+          </div>
+          <!-- <p class="card-text">- 40ml Vodka<br>- 15ml Triple Sec<br>- 30ml Áfonyalé<br>- 15ml Lime Juice<br>- Jégkocka</p> -->
         </div>
       </div>
     </div>
+  </div>
+
     
   </div>
-</div>
+
