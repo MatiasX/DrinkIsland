@@ -4,11 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
 import { RouterModule, Routes } from '@angular/router';
-=======
 import { ReactiveFormsModule } from '@angular/forms';
->>>>>>> b4c4a57e7501bcafaa9202dcc75d1a9ad4209605
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -59,11 +56,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-<<<<<<< HEAD
-    RouterModule.forRoot(appRoutes)
-=======
+    RouterModule.forRoot(appRoutes),
     ReactiveFormsModule
->>>>>>> b4c4a57e7501bcafaa9202dcc75d1a9ad4209605
   ],
   providers: [],
   bootstrap: [AppComponent]
