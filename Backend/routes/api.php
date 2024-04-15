@@ -39,6 +39,8 @@ Route::get('/getItalok', [ItalController::class, 'getItalok']);
 Route::put('/modifyItal', [ItalController::class, 'modifyItal']);
 Route::delete('/deleteItal', [ItalController::class, 'deleteItal']);
 
+
+//http://localhost:8000/api/getAlkoholmentes
 Route::get('/getReceptek', [KoktelController::class, 'getReceptek']);
 Route::get('/getTeli', [KoktelController::class, 'getTeli']);
 Route::get('/getNyari', [KoktelController::class, 'getNyari']);
