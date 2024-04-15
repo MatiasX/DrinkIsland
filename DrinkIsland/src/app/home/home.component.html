@@ -1,224 +1,42 @@
-<body>
-
-  <div id="slider">
-    <input type="radio" name="slider" id="slide1" checked>
-    <input type="radio" name="slider" id="slide2">
-    <input type="radio" name="slider" id="slide3">
-    <input type="radio" name="slider" id="slide4">
-    <div id="slides">
-       <div id="overflow">
-          <div class="inner">
-             <div class="slide slide_1">
-                <div class="slide-content">
-                   <h1>DrinkIsland</h1>
-                   <h2>Az Ízek harmóniája</h2>
-                </div>
-             </div>
-             <div class="slide slide_2">
-                <div class="slide-content">
-                   <h2>Koktélok tárháza</h2>
-                   <p>+100 koktél</p>
-                </div>
-             </div>
-             <div class="slide slide_3">
-                <div class="slide-content">
-                   <h2>Korhű animációk</h2>
-                   <p>Regisztráció és bejelentkezés után az oldal
-                        különleges színekben fog pompázni.</p>
-                </div>
-             </div>
-             <div class="slide slide_4">
-                <div class="slide-content">
-                   <h2>Lehetőségek</h2>
-                   <p>Koktélok feltöltése,profil címek szerzése....</p>
-                </div>
-             </div>
-          </div>
-       </div>
-
-    </div>
-    <div id="controls">
-       <label for="slide1"></label>
-       <label for="slide2"></label>
-       <label for="slide3"></label>
-       <label for="slide4"></label>
-    </div>
-    <div id="bullets">
-       <label for="slide1"></label>
-       <label for="slide2"></label>
-       <label for="slide3"></label>
-       <label for="slide4"></label>
-    </div>
-
-    <div class="buttons">
-      <button id="prev"><</button>
-      <button id="next">></button>
-    </div>
- </div>
-
-
- <div class="nelegyelfeher">
- <div class="slider02">
-  <!-- list Items -->
-  <div class="list">
-      <div class="item active">
-          <img src="../../assets/img/colada.jpg">
-          <div class="content">
-              <div class="receptek">
-                <a class="nyomógomb" routerLink="/recipes/alcoholic">Koktél katalógus</a>
-              </div>
-              <h2>Pina Colada</h2>
-              <p>
-                  Frissesség, trópusi ízvilág, édes ízek jellemzik.
-              </p>
-          </div>
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="hero-title">Üdvözöljük a DrinkIsland oldalon!</h1>
+        <p class="hero-text">Fedezze fel a világ legfinomabb koktél receptjeit és készítse el otthon!</p>
       </div>
-      <div class="item">
-          <img src="../../assets/img/Mojito.jpg">
-          <div class="content">
-              <div class="receptek">
-                <a class="nyomógomb" routerLink="/recipes/alcoholic">Koktél katalógus</a>
-              </div>
-              <h2>Mojito</h2>
-              <p>
-                  Főleg Magyar fórumokban egy műanyag pohárszerű bódéban árulják.
-              </p>
-          </div>
-      </div>
-      <div class="item">
-          <img src="../../assets/img/Bloody_Mary.jpg">
-          <div class="content">
-              <div class="receptek">
-                <a class="nyomógomb" routerLink="/recipes/alcoholic">Koktél katalógus</a>
-              </div>
-              <h2>Bloody Mary</h2>
-              <p>
-                  Van erről egy film, asszem egy néger nő mindig
-                  egy ködből lép ki és  gyilkolja az embereket.
-              </p>
-          </div>
-      </div>
-      <div class="item">
-          <img src="../../assets/img/Manhattan.jpg">
-          <div class="content">
-              <div class="receptek">
-                <a class="nyomógomb" routerLink="/recipes/alcoholic">Koktél katalógus</a>
-              </div>
-              <h2>Manhattan</h2>
-              <p>
-                  Az USA egyik állama? nem tudom, de érdekes egy koktél.
-              </p>
-          </div>
-      </div>
-      <div class="item">
-          <img src="../../assets/img/Long_island.jpg">
-          <div class="content">
-              <div class="receptek">
-                <a class="nyomógomb" routerLink="/recipes/alcoholic">Koktél katalógus</a>
-              </div>
-              <h2>Long Island</h2>
-              <p>
-                  Legtöbb kocsmában megtalálható. Nem véletlen közismert. Olcsó és finom.
-              </p>
-          </div>
-      </div>
-  </div>
-  <!-- button arrows -->
-  <div class="arrows">
-      <button id="prev02"><</button>
-      <button id="next02">></button>
-  </div>
-  <!-- thumbnail -->
-  <div class="thumbnail">
-      <div class="item active">
-          <img src="../../assets/img/colada.jpg">
-          <div class="content">
-              Pina Colada
-          </div>
-      </div>
-      <div class="item">
-          <img src="../../assets/img/Mojito.jpg">
-          <div class="content">
-             Mojito
-          </div>
-      </div>
-      <div class="item">
-        <img src="../../assets/img/Bloody_Mary.jpg">
-        <div class="content">
-            Bloody Mary
-        </div>
-    </div>
-      <div class="item">
-          <img src="../../assets/img/Manhattan.jpg">
-          <div class="content">
-              Manhattan
-          </div>
-      </div>
-      <div class="item">
-          <img src="../../assets/img/Long_island.jpg">
-          <div class="content">
-              Long Island
-          </div>
-      </div>
-  </div>
-</div>
-
-
-
-  <div id="Tovább" class="sectionRowClass">
-    <div class="sectionColClass">
-      
-      <div id="További_ízelítő">
-        <h2>Oldal lehetőségei:</h2>
-        <p>Lehetőséget nyújtunk a felhasználóknak különböző koktelok kipróbálására.</p>
-      </div>
-
-      <div class="sectionRowClass">
-        <!-- első -->
-        <div class="sectionColClass feature-item">
-          <div data-type-icon class="Koktél-ikonok koktél-ikon-kinézet ">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M16 9h3l-5 7m-4-7h4l-2 8M5 9h3l2 7m5-12h2l2 3h-3m-5-3h2l1 3h-4M7 4h2L8 7H5m1-5L2 8l10 14L22 8l-4-6H6z">
-              </path>
-            </svg>
-          </div>
-          <h3>Koktélok</h3>
-          <div class="Részletező">
-            <p>Megismerhetsz szezonális, gyümölcsös koktélokat</p>
-          </div>
-        </div>
-        <!-- második -->
-        <div class="sectionColClass feature-item">
-          <div data-type-icon class="Koktél-ikonok koktél-ikon-kinézet">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M16 9h3l-5 7m-4-7h4l-2 8M5 9h3l2 7m5-12h2l2 3h-3m-5-3h2l1 3h-4M7 4h2L8 7H5m1-5L2 8l10 14L22 8l-4-6H6z">
-              </path>
-            </svg>
-          </div>
-          <h3>Receptek</h3>
-          <div class="Részletező">
-            <p>Ha netán piálni akarsz, akkor mi megmutatjuk, mit dobj a pohárba. </p>
-          </div>
-        </div>
-        <!-- harmadik -->
-        <div class="sectionColClass feature-item">
-          <div data-type-icon class="Koktél-ikonok koktél-ikon-kinézet">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M16 9h3l-5 7m-4-7h4l-2 8M5 9h3l2 7m5-12h2l2 3h-3m-5-3h2l1 3h-4M7 4h2L8 7H5m1-5L2 8l10 14L22 8l-4-6H6z">
-              </path>
-            </svg>
-          </div>
-          <h3>Kalkulátor</h3>
-          <div class="Részletező">
-            <p>Épp innál valamit, de nem tudod mikor ürül ki? Kalkulálj velünk!</p>
-          </div>
-        </div>
-        <!-- itt a vége -->
+      <div class="col-lg-6">
+        <img src="/assets/img/Manhattan.jpg" alt="Koktél" class="img-fluid">
       </div>
     </div>
   </div>
-</div>
-</body>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="feature">
+          <i class="fas fa-cocktail fa-3x"></i>
+          <h3>Koktél Receptek</h3>
+          <p>Ismerje meg a legújabb és legjobb koktél recepteket, amelyeket könnyen elkészíthet otthon.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature">
+          <i class="fas fa-glass-cheers fa-3x"></i>
+          <h3>Koktél Kiegészítők</h3>
+          <p>Ismerje meg a legnépszerűbb koktél kiegészítőket és felszereléseket a tökéletes ital elkészítéséhez.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature">
+          <i class="fas fa-users fa-3x"></i>
+          <h3>Látogass vissza!</h3>
+          <p>Csatlakozzon közösségünkhöz, mentse el kedvelt receptjeit hogy később könnyedén megtalálja!.</p>
+          <a routerLink="/justsignup" class="btn btn-primary btn-lg">Regisztráció</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
