@@ -1,4 +1,4 @@
-<div class="whole">
+<!-- <div class="whole">
 <div id="registerForm" class="container">
     <form action="">
       <h1>
@@ -33,4 +33,17 @@
       </div>
   </form>
 </div>
-</div>
+</div> -->
+
+<div class="whole">
+    <div id="registerForm" class="container">
+      <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm">
+        <input formControlName="username" type="text" placeholder="Felhasználónév" required>
+        <input formControlName="email" type="email" placeholder="Email" required>
+        <input formControlName="password" type="password" placeholder="jelszó" required>
+        <input formControlName="password_confirmation" type="password" placeholder="jelszó újra" required>
+  
+        <button type="submit" class="btn">Regisztráció</button>
+      </form>
+    </div>
+  </div>
