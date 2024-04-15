@@ -11,7 +11,7 @@ class Tipus extends Model
     protected $table = 'tipus';
     public $timestamps = false;
     protected $fillable = [
-        'italok_id',
+        'ital_id',
         'teli',
         'nyari',
         'edes',

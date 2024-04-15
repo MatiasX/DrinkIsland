@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Ital;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\TipusController;
+use App\Http\Controllers\ReceptController;
 
 class ItalController extends Controller
 {
     public function addItal(Request $request){
         $request->validate([
-            'name' => 'required'
+            'name' => ['required', 'unique:italok']
         ]);
         $ital=new Ital;
         $ital->name=$request->get('name');
@@ -33,30 +35,32 @@ class ItalController extends Controller
         return response()->json($italok);
     }
 
-    /*public function modifyItal(Request $request){
-        $id=0;
-    }
-
-
-    public function modifyType(Request $request){
-        $id = $request->get("id");
-        $type = Type::find($id);
-        $type->type = $request->get("type");
-        $type->save();
-        if (is_null($type)) {
-            return $this->sendError("hiba a bejövő paraméterekben","Nincs ilyen Type");
+    public function modifyItal(Request $request){
+        $request->validate([
+            'name' => ['required', 'unique:italok']
+        ]);
+        $id = $request->id;
+        $ital = Ital::find($id);
+        if (is_null($ital)) {
+            return response()->json(['message'=>'Hiba a bejövő paraméterekben. Nincs ilyen id-jű Ital.', 'id'=>$id], 202);
         }
-        return $this->sendResponse($type, "Módosítva");
+        $ital->name=$request->get('name');
+        $ital->save();
+        return response()->json(['message'=>'Ital sikeresen módosítva', 'data'=>$ital], 201);
     }
-    
-    public function destroyType(Request $request){
-        
-        $type = Type::find($request->get("id"));
-        if (is_null($type)) {
-            return $this->sendError("hiba a bejövő paraméterekben","Nincs ilyen Type");
+
+
+    public function deleteItal(Request $request){
+        $id = $request->id;
+        $ital = Ital::find($id);
+        if (is_null($ital)) {
+            return response()->json(['message'=>'Hiba a bejövő paraméterekben. Nincs ilyen id-jű Ital.', 'id'=>$id], 202);
         }else {
-            Type::destroy($type->id);
-            return $this->sendResponse($type, "Törölve");
+            (new TipusController)->deleteTipusByItalId($ital);
+            DB::table('receptek')->where('ital_id', $ital->id)->delete();
+            Ital::destroy($ital->id);
+            //(new ReceptController)->deleteAllRecept($ital);
+            return response()->json(['message'=>'Ital sikeresen törölve', 'data'=>$ital], 201);
         }
-    }*/
+    }
 }

@@ -59,7 +59,7 @@ INSERT INTO `italok` (`id`, `name`) VALUES
 
 
 
-INSERT INTO `receptek` (`italok_id`, `alapanyag_id`, `amount`) VALUES
+INSERT INTO `receptek` (`ital_id`, `alapanyag_id`, `amount`) VALUES
 (1, 2, 4),
 (1, 3, 2),
 (1, 4, 10),
@@ -119,7 +119,7 @@ INSERT INTO `receptek` (`italok_id`, `alapanyag_id`, `amount`) VALUES
 (11, 1, 1);
 
 
-INSERT INTO `tipus` (`italok_id`, `teli`, `nyari`, `edes`, `savanyu`, `keseru`, `alkoholos`, `alkoholmentes`) VALUES
+INSERT INTO `tipus` (`ital_id`, `teli`, `nyari`, `edes`, `savanyu`, `keseru`, `alkoholos`, `alkoholmentes`) VALUES
 (1, 0, 1, 1, 0, 0, 1, 0),
 (2, 0, 1, 1, 1, 1, 1, 0),
 (3, 0, 1, 1, 1, 0, 1, 0),

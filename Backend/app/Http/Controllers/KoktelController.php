@@ -16,7 +16,7 @@ class KoktelController extends Controller
     {
         $receptek = DB::table('italok')
             ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
-            ->join('receptek', 'italok.id', '=', 'receptek.italok_id')
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->groupBy('italok.name','italok.id')
             ->get();
@@ -33,7 +33,23 @@ class KoktelController extends Controller
         $name=$italNeve->name;
         $recept = DB::table('italok')
             ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
-            ->join('receptek', 'italok.id', '=', 'receptek.italok_id')
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->where('italok.name', $name)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        $recept[0]->Recept=json_decode($recept[0]->Recept);
+
+        return response()->json($recept);
+    }
+
+    public function getIngredientsByName($italNeve)
+    {
+        $name=$italNeve->name;
+        $recept = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->where('italok.name', $name)
             ->groupBy('italok.name','italok.id')

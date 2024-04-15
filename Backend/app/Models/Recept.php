@@ -11,7 +11,7 @@ class Recept extends Model
     protected $table = 'receptek';
     public $timestamps = false;
 
-    protected $fillable = ['italok_id', 'alapanyag_id', 'amount'];
+    protected $fillable = ['ital_id', 'alapanyag_id', 'amount'];
     
     public function ital()
     {

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tipus', function (Blueprint $table) {
             $table->id();
-            $table->foreignId( "italok_id" );
+            $table->foreignId( "ital_id" );
             $table->boolean('teli');
             $table->boolean('nyari');
             $table->boolean('edes');

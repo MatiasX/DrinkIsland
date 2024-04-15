@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('receptek', function (Blueprint $table) {
             $table->id();
-            $table->foreignId( "italok_id" );
+            $table->foreignId( "ital_id" );
             $table->foreignId( "alapanyag_id" );
             $table->integer( "amount" );
             //$table->timestamps();
