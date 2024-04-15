@@ -27,6 +27,18 @@
         <li class="nav-item"><a class="nav-link" routerLink="/ingredients">Ingredients</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="/calculator">Alcohol Calculator</a></li>
         <li class="nav-item"><a class="nav-link disabled" routerLink="/support">Segítség</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/admin/alapanyag">Alapanyag</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/ital">Ital</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/recept">Recept</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/user">User</a></li>
+          </ul>
+        </li>
       </ul>
 
       <ul class="navbar-nav">

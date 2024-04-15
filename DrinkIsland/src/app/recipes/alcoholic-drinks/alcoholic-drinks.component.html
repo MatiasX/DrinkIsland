@@ -1,48 +1,21 @@
+<!-- <div class="idkbox"></div>
+
 <div class="container">
-  <h1 class="text-center">Alkoholos koktélok</h1>
+  <h1 class="text-center">Koktél Kereső</h1>
+  <input type="text" class="form-control mb-4" placeholder="Keresés..." [(ngModel)]="searchQuery">
 
-  <form>
-
-    <div class="form-group">
-      <label for="name">Koktél neve</label>
-      <input type="text" name="name" class="form-control">
-    </div>
-
-    <div class="form-group">
-      <label for="name">leírása</label>
-      <input type="text" name="name" class="form-control">
-    </div>
-
-    <div class="form-group">
-      <label for="name">Összetevői</label>
-      <input type="text" name="name" class="form-control">
-    </div>
-
-    <button class="btn btn-dark btn-sm mt-4">beküldés</button>
-  </form>
   <div class="row">
-    <!-- További koktélok itt -->
-    <div *ngFor="let dri of drinks"  class="">
-    <div class="col-md-4 mb-4">
-      <div class="card h-100">
-        <!-- <img src="assets/img/cosmopolitan.jpg" class="card-img-top" alt="Cosmopolitan"> -->
+    <div class="col-lg-4" *ngFor="let cocktail of cocktails">
+      <div class="card mb-4">
         <div class="card-body">
-          <h2 class="card-title">{{dri.Ital}}</h2>
-          <p class="card-text">Leírása az italoknak.</p>
-
-          <h3>Recept:</h3>
-            <ul>
-              <li *ngFor="let ingredient of dri.Recept | keyvalue">
-                {{ ingredient.key }}: {{ ingredient.value }}
-              </li>
-            </ul>
-          </div>
-          <!-- <p class="card-text">- 40ml Vodka<br>- 15ml Triple Sec<br>- 30ml Áfonyalé<br>- 15ml Lime Juice<br>- Jégkocka</p> -->
+          <h5 class="card-title">{{ cocktail.name }}</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let ingredient of cocktail.ingredients">
+              {{ ingredient }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-
-    
-  </div>
-
+</div> -->
