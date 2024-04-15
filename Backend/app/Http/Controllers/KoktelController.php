@@ -21,9 +21,9 @@ class KoktelController extends Controller
             ->groupBy('italok.name','italok.id')
             ->get();
         
-            foreach($receptek as &$recept){
-                $recept->Recept=json_decode($recept->Recept);
-            }
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
 
         return response()->json($receptek);
     }
@@ -58,5 +58,131 @@ class KoktelController extends Controller
         $recept[0]->Recept=json_decode($recept[0]->Recept);
 
         return response()->json($recept);
+    }
+
+    public function getTeli()
+    {
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
+            ->where('tipus.teli', 1)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
+    }
+
+    public function getNyari()
+    {
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
+            ->where('tipus.nyari', 1)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
+    }
+
+    public function getEdes()
+    {
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
+            ->where('tipus.edes', 1)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
+    }
+
+    public function getSavanyu()
+    {
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
+            ->where('tipus.savanyu', 1)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
+    }
+
+    public function getKeseru()
+    {
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
+            ->where('tipus.keseru', 1)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
+    }
+
+    public function getAlkoholos()
+    {
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
+            ->where('tipus.alkoholos', 1)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
+    }
+
+    public function getAlkoholmentes()
+    {
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
+            ->where('tipus.alkoholmentes', 1)
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
     }
 }

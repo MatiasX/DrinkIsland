@@ -41,7 +41,8 @@ INSERT INTO `alapanyagok` (`id`, `name`) VALUES
 (40, 'Angostura bitter'),
 (41, 'öntet cseresznyelikő'),
 (42, 'narancs héja'),
-(44, 'aperol likőr');
+(44, 'aperol likőr'),
+(45, 'málnaszörp');
 
 
 INSERT INTO `italok` (`id`, `name`) VALUES
@@ -55,7 +56,8 @@ INSERT INTO `italok` (`id`, `name`) VALUES
 (8, 'Negroni'),
 (9, 'old fashioned'),
 (10, 'Daiquiri'),
-(11, 'Bloody Mary');
+(11, 'Bloody Mary'),
+(12, 'Limonádé');
 
 
 
@@ -116,7 +118,13 @@ INSERT INTO `receptek` (`ital_id`, `alapanyag_id`, `amount`) VALUES
 (11, 11, 1),
 (11, 12, 1),
 (11, 13, 1),
-(11, 1, 1);
+(11, 1, 1),
+(12, 1, 6),
+(12, 9, 2),
+(12, 20, 2),
+(12, 21, 1),
+(12, 23, 20),
+(12, 33, 2);
 
 
 INSERT INTO `tipus` (`ital_id`, `teli`, `nyari`, `edes`, `savanyu`, `keseru`, `alkoholos`, `alkoholmentes`) VALUES
@@ -130,4 +138,5 @@ INSERT INTO `tipus` (`ital_id`, `teli`, `nyari`, `edes`, `savanyu`, `keseru`, `a
 (8, 0, 1, 0, 0, 1, 1, 0),
 (9, 1, 1, 0, 0, 1, 1, 0),
 (10, 0, 1, 1, 1, 0, 1, 0),
-(11, 0, 1, 1, 1, 1, 1, 0);
+(11, 0, 1, 1, 1, 1, 1, 0),
+(12, 0, 1, 1, 1, 0, 0, 1);

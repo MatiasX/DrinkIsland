@@ -40,6 +40,13 @@ Route::put('/modifyItal', [ItalController::class, 'modifyItal']);
 Route::delete('/deleteItal', [ItalController::class, 'deleteItal']);
 
 Route::get('/getReceptek', [KoktelController::class, 'getReceptek']);
+Route::get('/getTeli', [KoktelController::class, 'getTeli']);
+Route::get('/getNyari', [KoktelController::class, 'getNyari']);
+Route::get('/getEdes', [KoktelController::class, 'getEdes']);
+Route::get('/getSavanyu', [KoktelController::class, 'getSavanyu']);
+Route::get('/getKeseru', [KoktelController::class, 'getKeseru']);
+Route::get('/getAlkoholos', [KoktelController::class, 'getAlkoholos']);
+Route::get('/getAlkoholmentes', [KoktelController::class, 'getAlkoholmentes']);
 Route::get('/getReceptByName', [KoktelController::class, 'getReceptByName']);
 
 Route::get('/getTipusByItalId', [TipusController::class, 'getTipusByItalId']);
@@ -56,6 +63,8 @@ Route::delete('/deleteRecept', [ReceptController::class, 'deleteRecept']);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+
+
 Route::group(["middleware"=>"auth:sanctum"], function(){
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/getUserProfileData', [ProfileController::class, 'getUserProfileData']);
