@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'recipes/alcoholic', component: AlcoholicDrinksComponent },
   { path: 'recipes/non-alcoholic', component: NonAlcoholicDrinksComponent },
   { path: 'recipes/detailed-search', component: DetailedSearchComponent },
-  { path: 'ingredients', component: IngredientsComponent },
+  { path: 'coctailblog', component: IngredientsComponent },
   { path: 'calculator', component: CalculatorComponent },
   { path: 'loginsignup', component: LoginsignupComponent },
   { path: 'justsignup', component: JustsignupComponent },
