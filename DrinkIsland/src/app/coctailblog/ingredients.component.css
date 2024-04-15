@@ -1,0 +1,66 @@
+.body{
+    padding: 100px 0;
+}
+/* Kártyák formázása */
+.card {
+    background-color: #f8f9fa; /* Háttérszín */
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.125); /* Keret */
+    border-radius: 0.25rem; /* Sarok lekerekítés */
+    margin-top: 30px;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* Árnyék */
+}
+
+
+/* Kártya fejléce */
+.card-header {
+    background-color: #672222;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Főcím formázása */
+.card-header b {
+    font-size: 1.25rem;
+}
+
+/* Kártya tartalma */
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Idézet blokk formázása */
+.blockquote {
+    border-left: 5px solid #5f5f5f;
+    padding: 0.5rem 1rem;
+    margin: 0 0 20px;
+}
+
+/* Idézet szövege */
+.blockquote p {
+    margin-bottom: 0.5rem;
+    
+}
+
+/* Idézet lábjegyzet formázása */
+.blockquote-footer {
+    margin-top: -0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+@media (min-width: 768px) {
+    .ingredient-component .card {
+      width: 80%; /* Szélesség 90% */
+      margin: auto; /* Középre igazítás */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .ingredient-component .card {
+      width: 100%; /* Szélesség 100% */
+    }
+  }
+  

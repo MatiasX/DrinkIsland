@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { RecipesComponent } from './recipes/recipes.component';
-import { IngredientsComponent } from './ingredients/ingredients.component';
+import { IngredientsComponent } from './coctailblog/ingredients.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FooterComponent } from './footer/footer.component';
 import { AlcoholicDrinksComponent } from './recipes/alcoholic-drinks/alcoholic-drinks.component';
