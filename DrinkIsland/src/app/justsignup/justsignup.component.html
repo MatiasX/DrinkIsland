@@ -1,24 +1,24 @@
-<!-- <div class="whole">
+<div class="whole">
 <div id="registerForm" class="container">
-    <form action="">
+    <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm">
       <h1>
           Regisztráció
       </h1>      
       
       <div class="input-box">
-          <input type="text" placeholder="Felhasználónév" required>
+        <input formControlName="username" type="text" placeholder="Felhasználónév" required>
       </div>
 
       <div class="input-box">
-          <input type="email" placeholder="Email" required>
+        <input formControlName="email" type="email" placeholder="Email" required>
       </div>
 
       <div class="input-box">
-          <input type="password" placeholder="jelszó" required>
+        <input formControlName="password" type="password" placeholder="Jelszó" required>
       </div>
 
       <div class="input-box">
-          <input type="password" placeholder="jelszó újra" required>
+        <input formControlName="password_confirmation" type="password" placeholder="Jelszó újra" required>
       </div>
 
       <button
@@ -33,17 +33,4 @@
       </div>
   </form>
 </div>
-</div> -->
-
-<div class="whole">
-    <div id="registerForm" class="container">
-      <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm">
-        <input formControlName="username" type="text" placeholder="Felhasználónév" required>
-        <input formControlName="email" type="email" placeholder="Email" required>
-        <input formControlName="password" type="password" placeholder="jelszó" required>
-        <input formControlName="password_confirmation" type="password" placeholder="jelszó újra" required>
-  
-        <button type="submit" class="btn">Regisztráció</button>
-      </form>
-    </div>
-  </div>
+</div>
