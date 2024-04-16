@@ -31,7 +31,7 @@ ng serve -o
 #Adatbázis létrehozása
 create database drinkisland;
 
-#táblák létrehozása (Laravel)
+#táblák létrehozása (Laravel) (a .env állományban a jelszót töröld ki, ha van ott valami)
 php artisan migrate
 
 #adatok feltöltése a táblákba
