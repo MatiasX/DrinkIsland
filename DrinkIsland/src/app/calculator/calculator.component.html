@@ -1,30 +1,40 @@
 <div class="test_body">
-<div class="container">
-  <h1>Alkohol kitisztulási idő kalkulátor</h1>
-  <form (ngSubmit)="calculate()">
-    <label for="weight">Tömeg (kg): </label>
-    <input type="number" id="weight" [(ngModel)]="weight" name="weight" required>
+  <div class="container">
+    <h1>Alkohol kitisztulási idő kalkulátor</h1>
+    <form (ngSubmit)="calculate()">
+      <div class="form-group">
+        <label for="weight">Tömeg (kg):</label>
+        <input type="number" class="form-control" id="weight" [(ngModel)]="weight" name="weight" required>
+      </div>
 
-    <label for="gender">Nem: </label>
-    <select id="gender" [(ngModel)]="gender" name="gender" required>
-      <option value="male">Férfi</option>
-      <option value="female">Nő</option>
-    </select>
+      <div class="form-group">
+        <label for="gender">Nem:</label>
+        <select class="form-control" id="gender" [(ngModel)]="gender" name="gender" required>
+          <option value="male">Férfi</option>
+          <option value="female">Nő</option>
+        </select>
+      </div>
 
-    <label for="alcoholAmount">Elfogyasztott alkohol mennyisége (dl): </label>
-    <input type="number" id="alcoholAmount" [(ngModel)]="alcoholAmount" name="alcoholAmount" required>
+      <div class="form-group">
+        <label for="alcoholAmount">Elfogyasztott alkohol mennyisége (dl):</label>
+        <input type="number" class="form-control" id="alcoholAmount" [(ngModel)]="alcoholAmount" name="alcoholAmount" required>
+      </div>
 
-    <label for="drinkAlcoholPercentage">Alkohol százaléka: </label>
-    <input type="number" id="drinkAlcoholPercentage" [(ngModel)]="drinkAlcoholPercentage" name="drinkAlcoholPercentage" required>
+      <div class="form-group">
+        <label for="drinkAlcoholPercentage">Alkohol százaléka:</label>
+        <input type="number" class="form-control" id="drinkAlcoholPercentage" [(ngModel)]="drinkAlcoholPercentage" name="drinkAlcoholPercentage" required>
+      </div>
 
-    <label for="timeSinceLastDrink">Utolsó ital elfogyasztása óta eltelt ideje (óra): </label>
-    <input type="number" id="timeSinceLastDrink" [(ngModel)]="timeSinceLastDrink" name="timeSinceLastDrink" required>
+      <div class="form-group">
+        <label for="timeSinceLastDrink">Utolsó ital elfogyasztása óta eltelt ideje (óra):</label>
+        <input type="number" class="form-control" id="timeSinceLastDrink" [(ngModel)]="timeSinceLastDrink" name="timeSinceLastDrink" required>
+      </div>
 
-    <button type="submit">Számol</button>
-  </form>
+      <button type="submit" class="btn btn-outline-success">Számol</button>
+    </form>
 
-  <div *ngIf="result !== undefined">
-    <p>Az alkohol kitisztulási várható idő: {{ result | number: '1.2-2' }} óra.</p>
+    <div *ngIf="result !== undefined">
+      <p>Az alkohol kitisztulási várható idő: {{ result | number: '1.2-2' }} óra.</p>
+    </div>
   </div>
-</div>
 </div>

@@ -62,27 +62,6 @@
     font-size: 20px;
 }
 
-.container .forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-.forgot label input{
-    accent-color: #fff;
-    margin-right:  3px;
-}
-
-.forgot a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.forgot a:hover{
-    text-decoration: underline;
-}
-
 .container .btn{
     width: 100%;
     height: 45px;
@@ -111,20 +90,4 @@
 
 .register_link p a:hover{
     text-decoration: underline;
-}
-
-.container .Login_link {
-  font-size: 14.5px;
-  text-align: center;
-  margin: 20px 0 15px;
-}
-
-.Login_link p a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.Login_link p a:hover{
-  text-decoration: underline;
 }

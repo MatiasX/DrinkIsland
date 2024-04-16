@@ -1,69 +1,39 @@
-/* calculator.component.css */
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family:'Times New Roman', Times, serif;
-}
-
 .test_body{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background:url(../../assets/img/calcu_01.jpg);
+  background:url(src/assets/img/background_second.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .container {
-  position: relative;
-  width: 400px;
-  height: 550px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-style: double;
+  border-width: 4px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control{
   text-align: center;
-  overflow: hidden;
-  justify-content: center;
-  backdrop-filter: blur(10px);
 }
 
-.container::before{
-  position: absolute;
-  width: 180px;
-  height: 140px;
-  background-color: white;
-  box-shadow: 0 0 20px rgb(8, 8, 8);
-  animation: animate 4s linear infinite;
-}
-.container::after{
-  position: absolute;
-  inset: 10px;
-  background-color: rgb(4, 75, 97);
-  border-radius: 16px;
-
+label {
+  font-weight: bold;
 }
 
-@keyframes animate{
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
-
-
-input{
-  height: 25px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-button {
-  margin-top: 10px;
-  cursor: pointer;
+.btn {
+  width: 100%;
 }
