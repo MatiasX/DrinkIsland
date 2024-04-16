@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoginService } from '../services/login.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-loginsignup',
@@ -8,32 +7,26 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./loginsignup.component.css']
 })
 export class LoginsignupComponent {
-  loginForm: FormGroup;
+  username: string = '';
+  password: string = '';
 
-  constructor(private fb: FormBuilder, private loginService: LoginService) {
-    this.loginForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
-  }
+  constructor(private http: HttpClient) { }
 
-  onSubmit(): void {
-    if (this.loginForm.valid) {
-      const loginData = {
-        username: this.loginForm.value.username,
-        password: this.loginForm.value.password
-      };
+  register(): void {
+    const userData = {
+      username: this.username,
+      password: this.password
+    };
 
-      this.loginService.login(loginData).subscribe(
-        response => {
-          // Handle success response from backend
-          console.log('Login successful:', response);
-        },
-        error => {
-          // Handle error response from backend
-          console.error('Login failed:', error);
-        }
-      );
-    }
+    this.http.post<any>('http://127.0.0.1:8000/api/login', userData).subscribe(
+      response => {
+        console.log('User logged in successfully:', response);
+        // Optionally, you can redirect the user or perform other actions after successful registration
+      },
+      error => {
+        console.error('Failed to log in user:', error);
+        // Optionally, you can display an error message to the user
+      }
+    );
   }
 }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RegistrationService } from '../services/registration.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-justsignup',
@@ -8,36 +7,30 @@ import { RegistrationService } from '../services/registration.service';
   styleUrls: ['./justsignup.component.css']
 })
 export class JustsignupComponent {
-  registrationForm: FormGroup;
+  username: string = '';
+  email: string = '';
+  password: string = '';
+  passwordConfirmation: string = '';
 
-  constructor(private fb: FormBuilder, private registrationService: RegistrationService) {
-    this.registrationForm = this.fb.group({
-      username: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      password_confirmation: ['', Validators.required]
-    });
-  }
+  constructor(private http: HttpClient) { }
 
-  onSubmit(): void {
-    if (this.registrationForm.valid) {
-      const userData = {
-        username: this.registrationForm.value.username,
-        email: this.registrationForm.value.email,
-        password: this.registrationForm.value.password,
-        password_confirmation: this.registrationForm.value.password_confirmation
-      };
+  register(): void {
+    const userData = {
+      username: this.username,
+      email: this.email,
+      password: this.password,
+      password_confirmation: this.passwordConfirmation
+    };
 
-      this.registrationService.register(userData).subscribe(
-        response => {
-          // Handle success response from backend
-          console.log('Registration successful:', response);
-        },
-        error => {
-          // Handle error response from backend
-          console.error('Registration failed:', error);
-        }
-      );
-    }
+    this.http.post<any>('http://127.0.0.1:8000/api/register', userData).subscribe(
+      response => {
+        console.log('User registered successfully:', response);
+        // Optionally, you can redirect the user or perform other actions after successful registration
+      },
+      error => {
+        console.error('Failed to register user:', error);
+        // Optionally, you can display an error message to the user
+      }
+    );
   }
 }
