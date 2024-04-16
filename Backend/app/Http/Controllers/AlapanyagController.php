@@ -52,7 +52,7 @@ class AlapanyagController extends Controller
         $id = $request->id;
         $alapanyag = Alapanyag::find($id);
         if (is_null($alapanyag)) {
-            return response()->json(['message'=>'Hiba a bejövő paraméterekben. Nincs ilyen id-jű alapanyag.', 'id'=>$id], 202);
+            return response()->json(['message'=>'Hiba a bejövő paraméterekben. Nincs ilyen id-jű alapanyag.', 'id'=>$request], 202);
         }
         $hasznalatban=(new ReceptController)->getReceptByAlapanyagId($request);
         if (is_null($hasznalatban)){

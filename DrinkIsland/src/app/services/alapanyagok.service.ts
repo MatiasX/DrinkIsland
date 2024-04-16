@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,18 +12,24 @@ export class AlapanyagokService {
   constructor(private http: HttpClient) { }
 
   getAllAlapanyagok(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl);
+    return this.http.get<any[]>('http://localhost:8000/api/getAlapanyagok');
   }
 
-  addAlapanyag(alapanyagData: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl, alapanyagData);
+  addAlapanyag(alapanyag: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'addAlapanyag', alapanyag);
   }
 
-  updateAlapanyag(id: number, alapanyagData: any): Observable<any> {
-    return this.http.put<any>(`${this.baseUrl}/${id}`, alapanyagData);
+  updateAlapanyag(alapanyag: any): Observable<any> {
+    return this.http.put<any>(this.baseUrl+'modifyAlapanyag', alapanyag);
   }
 
-  deleteAlapanyag(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.baseUrl}/${id}`);
+  deleteAlapanyag(alapanyag: any): Observable<any> {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+      body: alapanyag,
+    };
+    return this.http.delete<any>(this.baseUrl+'deleteAlapanyag', options);
   }
 }

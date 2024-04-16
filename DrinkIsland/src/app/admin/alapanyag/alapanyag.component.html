@@ -1,0 +1,22 @@
+<div class="whole">
+<div>
+  <!-- Form to add a new alapanyag -->
+  <form (submit)="addAlapanyag(newAlapanyag)">
+    <label for="newAlapanyag">New Alapanyag Name:</label>
+    <input type="text" id="newAlapanyag" [(ngModel)]="newAlapanyag.name" name="name" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <!-- Display existing alapanyag items -->
+  <ul>
+    <li *ngFor="let alapanyag of alapanyagok">
+      <input type="number" [(ngModel)]="alapanyag.id" name="id" required>
+      <input type="text" [(ngModel)]="alapanyag.name" name="name" required>
+      <!-- Save button -->
+      <button (click)="updateAlapanyag(alapanyag)">Save</button>
+      <!-- Delete button -->
+      <button (click)="deleteAlapanyag(alapanyag)">Delete</button>
+    </li>
+  </ul>
+</div>
+</div>
