@@ -9,8 +9,8 @@ import { NonAlcoholicDrinksComponent } from './recipes/non-alcoholic-drinks/non-
 import { DetailedSearchComponent } from './recipes/detailed-search/detailed-search.component';
 import { IngredientsComponent } from './coctailblog/ingredients.component';
 import { CalculatorComponent } from './calculator/calculator.component';
-import { LoginsignupComponent } from './loginsignup/loginsignup.component';
-import { JustsignupComponent } from './justsignup/justsignup.component';
+import { LoginsignupComponent } from './login/loginsignup.component';
+import { JustsignupComponent } from './register/justsignup.component';
 import { SupportComponent } from './support/support.component';
 import { AlapanyagokComponent } from './admin/alapanyag/alapanyag.component';
 import { ItalComponent } from './admin/ital/ital.component';

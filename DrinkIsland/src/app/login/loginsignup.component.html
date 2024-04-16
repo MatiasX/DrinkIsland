@@ -1,0 +1,19 @@
+<div class="whole">
+  <form (ngSubmit)="register()" #signupForm="ngForm">
+    <div>
+      <label for="username">Felhasználónév:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required>
+    </div>
+    <div>
+      <label for="password">Jelszó:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit">Bejelentkezés</button>
+    <div class="Register_link">
+      <p>
+        Még nincs fiókod?
+        <a routerLink="/justsignup">Regisztráció</a>
+      </p>
+    </div>
+  </form>
+</div>
