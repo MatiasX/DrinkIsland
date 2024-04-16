@@ -12,7 +12,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 import { JustsignupComponent } from './justsignup/justsignup.component';
 import { SupportComponent } from './support/support.component';
-import { AlapanyagComponent } from './admin/alapanyag/alapanyag.component';
+import { AlapanyagokComponent } from './admin/alapanyag/alapanyag.component';
 import { ItalComponent } from './admin/ital/ital.component';
 import { ReceptComponent } from './admin/recept/recept.component';
 import { UserComponent } from './admin/user/user.component';
@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'loginsignup', component: LoginsignupComponent },
   { path: 'justsignup', component: JustsignupComponent },
   { path: 'support', component: SupportComponent },
-  { path: 'admin/alapanyag', component: AlapanyagComponent },
+  { path: 'admin/alapanyag', component: AlapanyagokComponent },
   { path: 'admin/ital', component: ItalComponent },
   { path: 'admin/recept', component: ReceptComponent },
   { path: 'admin/user', component: UserComponent },
