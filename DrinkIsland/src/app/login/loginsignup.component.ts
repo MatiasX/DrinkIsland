@@ -21,6 +21,7 @@ export class LoginsignupComponent {
     this.http.post<any>('http://127.0.0.1:8000/api/login', userData).subscribe(
       response => {
         console.log('User logged in successfully:', response);
+        localStorage.setItem('authToken', response.success.token);
         // Optionally, you can redirect the user or perform other actions after successful registration
       },
       error => {

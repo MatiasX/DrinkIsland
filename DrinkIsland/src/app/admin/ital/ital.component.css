@@ -1,0 +1,46 @@
+.whole {
+    width: 90%;
+    margin: auto;
+}
+
+.form-row {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+.header-row {
+    display: flex;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.header-cell {
+    flex: 1;
+    padding: 10px;
+}
+
+.data-row {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.data-cell {
+    flex: 1;
+    padding: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

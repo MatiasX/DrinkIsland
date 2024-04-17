@@ -12,7 +12,7 @@ use App\Models\User;
 
 class KoktelController extends Controller
 {
-    public function getReceptek()
+    public function getKoktelok()
     {
         $receptek = DB::table('italok')
             ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))

@@ -8,7 +8,7 @@ export class DataService {
   constructor(private httpClient:HttpClient) {}
 
   getData(){
-    return this.httpClient.get('http://localhost:8000/api/getReceptek');
+    return this.httpClient.get('http://localhost:8000/api/getKoktelok');
   }
 
 }

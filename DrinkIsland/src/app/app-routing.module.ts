@@ -16,6 +16,7 @@ import { AlapanyagokComponent } from './admin/alapanyag/alapanyag.component';
 import { ItalComponent } from './admin/ital/ital.component';
 import { ReceptComponent } from './admin/recept/recept.component';
 import { UserComponent } from './admin/user/user.component';
+import { TipusComponent } from './admin/tipus/tipus.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'admin/alapanyag', component: AlapanyagokComponent },
   { path: 'admin/ital', component: ItalComponent },
   { path: 'admin/recept', component: ReceptComponent },
+  { path: 'admin/tipus', component: TipusComponent },
   { path: 'admin/user', component: UserComponent },
 ];
 

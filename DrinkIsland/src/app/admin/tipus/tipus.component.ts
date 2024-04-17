@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { ItalokService } from 'src/app/services/italok.service';
+import { Component } from '@angular/core';
+import { TipusService } from '../../services/tipus.service';
 
 @Component({
-  selector: 'app-ital',
-  templateUrl: './ital.component.html',
-  styleUrls: ['./ital.component.css']
+  selector: 'app-tipus',
+  templateUrl: './tipus.component.html',
+  styleUrls: ['./tipus.component.css']
 })
-export class ItalComponent {
-  italok: any[] = [];
-  newItal: any = { name: '' };
+export class TipusComponent {
+  tipusok: any[] = [];
+  newTipus: any = { name: '' };
 
-  constructor(private italokService: ItalokService) { }
+  constructor(private tipusokService: TipusService) { }
 
   ngOnInit(): void {
-    this.loadItalok();
+    this.loadTipusok();
   }
 
-  loadItalok(): void {
-    this.italokService.getAllItalok().subscribe(
+  loadTipusok(): void {
+    this.tipusokService.getAllTipusok().subscribe(
       response => {
-        this.italok = response;
+        this.tipusok = response;
       },
       error => {
         console.error('Error loading data:', error);
@@ -27,8 +27,8 @@ export class ItalComponent {
     );
   }
 
-  addItal(newItal: any): void {
-    this.italokService.addItal(newItal).subscribe(
+  addTipus(newTipus: any): void {
+    this.tipusokService.addTipus(newTipus).subscribe(
       response => {
         console.log('Data updated successfully:', response);
         // Optionally, reload the data after update
@@ -39,8 +39,8 @@ export class ItalComponent {
     );
   }
 
-  updateItal(ital: any): void {
-    this.italokService.updateItal(ital).subscribe(
+  updateTipus(tipus: any): void {
+    this.tipusokService.updateTipus(tipus).subscribe(
       response => {
         console.log('Data updated successfully:', response);
         // Optionally, reload the data after update
@@ -51,8 +51,8 @@ export class ItalComponent {
     );
   }
 
-  deleteItal(ital: any): void {
-    this.italokService.deleteItal(ital).subscribe(
+  deleteTipus(tipus: any): void {
+    this.tipusokService.deleteTipus(tipus).subscribe(
       response => {
         console.log('Data deleted successfully:', response);
         // Optionally, reload the data after update

@@ -5,42 +5,41 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-
-export class AlapanyagokService {
+export class TipusService {
   private baseUrl = 'http://localhost:8000/api/';
 
   constructor(private http: HttpClient) { }
 
-  getAllAlapanyagok(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl + 'getAlapanyagok');
+  getAllTipusok(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl + 'getTipusok');
   }
 
-  addAlapanyag(alapanyag: any): Observable<any> {
+  addTipus(tipus: any): Observable<any> {
     const authToken = localStorage.getItem('authToken');
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
     console.log(headers);
-    return this.http.post<any>(this.baseUrl + 'addAlapanyag', alapanyag, { headers });
+    return this.http.post<any>(this.baseUrl + 'addTipus', tipus, { headers });
   }
 
-  updateAlapanyag(alapanyag: any): Observable<any> {
+  updateTipus(tipus: any): Observable<any> {
     const authToken = localStorage.getItem('authToken');
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
-    return this.http.put<any>(this.baseUrl + 'modifyAlapanyag', alapanyag, { headers });
+    return this.http.put<any>(this.baseUrl + 'modifyTipus', tipus, { headers });
   }
 
-  deleteAlapanyag(alapanyag: any): Observable<any> {
+  deleteTipus(tipus: any): Observable<any> {
     const authToken = localStorage.getItem('authToken');
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${authToken}`
       }),
-      body: alapanyag,
+      body: tipus,
     };
-    return this.http.delete<any>(this.baseUrl + 'deleteAlapanyag', options);
+    return this.http.delete<any>(this.baseUrl + 'deleteTipus', options);
   }
 }

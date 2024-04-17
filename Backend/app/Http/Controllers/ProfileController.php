@@ -6,12 +6,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
     public function getUserProfileData() {
         $user = Auth::user();
         return response()->json(['username' => $user]);
+    }
+
+    public function getUsers() {
+        $users = DB::table('users')->get();
+        return response()->json($users);
     }
 
     public function setNewPassword(Request $request) {

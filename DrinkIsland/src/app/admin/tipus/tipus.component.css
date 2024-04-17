@@ -11,6 +11,10 @@
     padding: 10px;
   }
 
+  .newTipus{
+    width: 10px;
+  }
+
 .header-row {
     display: flex;
     background-color: #f0f0f0;
@@ -20,16 +24,24 @@
 .header-cell {
     flex: 1;
     padding: 10px;
+    width: 20px;
 }
 
 .data-row {
     display: flex;
     border-bottom: 1px solid #ccc;
 }
+input[type="number"] {
+    width: 8%;
+  }
+.data-cell>input[type="number"] {
+    width: 90%;
+  }
 
 .data-cell {
     flex: 1;
     padding: 10px;
+    width: 8%;
 }
 
 button {

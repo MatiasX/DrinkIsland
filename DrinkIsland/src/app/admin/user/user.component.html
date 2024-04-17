@@ -1,1 +1,16 @@
-<p>user works!</p>
+<div class="whole">
+      <ul>
+        <li class="header-row">
+          <div class="header-cell">Felhasználónév</div>
+          <div class="header-cell"></div>
+        </li>
+        <li *ngFor="let user of userek" class="data-row">
+          <div class="data-cell">
+            <input type="text" [(ngModel)]="user.username" name="name" required>
+          </div>
+          <div class="data-cell">
+            <button (click)="setAdmin(user)">Hozzáadás az adminokhoz</button>
+          </div>
+        </li>
+      </ul>
+  </div>

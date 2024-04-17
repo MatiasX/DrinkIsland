@@ -1,1 +1,37 @@
-<p>recept works!</p>
+<div class="whole">
+    <div>
+      <form class="form-row" (submit)="addRecept(newRecept)">
+        <label for="newRecept">Ital ID:</label>
+        <input type="number" id="newRecept" [(ngModel)]="newRecept.ital_id" name="name" required>
+        <label for="newRecept">Alapanyag ID:</label>
+        <input type="number" id="newRecept" [(ngModel)]="newRecept.alapanyag_id" name="name" required>
+        <label for="newRecept">Mennyiség:</label>
+        <input type="number" id="newRecept" [(ngModel)]="newRecept.amount" name="name" required>
+        <button type="submit">Add</button>
+      </form>
+
+      <ul>
+        <li class="header-row">
+          <div class="header-cell">Ital ID</div>
+          <div class="header-cell">Alapanyag ID</div>
+          <div class="header-cell">Mennyiség</div>
+          <div class="header-cell"></div>
+        </li>
+        <li *ngFor="let recept of receptek" class="data-row">
+          <div class="data-cell">
+            <input type="number" [(ngModel)]="recept.ital_id" name="ital_id" required>
+          </div>
+          <div class="data-cell">
+            <input type="number" [(ngModel)]="recept.alapanyag_id" name="alapanyag_id" required>
+          </div>
+          <div class="data-cell">
+            <input type="number" [(ngModel)]="recept.amount" name="amount" required>
+          </div>
+          <div class="data-cell">
+            <button (click)="updateRecept(recept)">Mentés</button>
+            <button (click)="deleteRecept(recept)">Törlés</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>

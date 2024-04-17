@@ -22,6 +22,11 @@ class ReceptController extends Controller
         return response()->json(['message'=>'Recept sikeresen hozzáadva', 'data'=>$recept], 201);
     }
 
+    public function getReceptek(){
+        $receptek = DB::table('receptek')->get();
+        return response()->json($receptek);
+    }
+
     public function getReceptByAlapanyagId(Request $request){
         //használatban van-e az alapanyag
         $current=Recept::where("alapanyag_id",$request->get('id'))->first();

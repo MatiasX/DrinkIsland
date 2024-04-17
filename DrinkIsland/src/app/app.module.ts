@@ -24,6 +24,7 @@ import { AlapanyagokComponent } from './admin/alapanyag/alapanyag.component';
 import { ItalComponent } from './admin/ital/ital.component';
 import { ReceptComponent } from './admin/recept/recept.component';
 import { UserComponent } from './admin/user/user.component';
+import { TipusComponent } from './admin/tipus/tipus.component';
 
 
 const appRoutes: Routes = [
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     AlapanyagokComponent,
     ItalComponent,
     ReceptComponent,
-    UserComponent
+    UserComponent,
+    TipusComponent
   ],
   imports: [
     NgbModule,

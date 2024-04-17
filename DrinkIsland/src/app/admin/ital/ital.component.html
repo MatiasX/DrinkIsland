@@ -1,1 +1,29 @@
-<p>ital works!</p>
+<div class="whole">
+    <div>
+        <form class="form-row" (submit)="addItal(newItal)">
+            <label for="newItal">Új ital neve:</label>
+            <input type="text" id="newItal" [(ngModel)]="newItal.name" name="name" required>
+            <button type="submit" class="add-button">Add</button>
+        </form>
+
+        <ul>
+            <li class="header-row">
+                <div class="header-cell">ID</div>
+                <div class="header-cell">Név</div>
+                <div class="header-cell"></div>
+            </li>
+            <li *ngFor="let ital of italok" class="data-row">
+                <div class="data-cell">
+                    <input type="text" [(ngModel)]="ital.id" name="id" readonly>
+                </div>
+                <div class="data-cell">
+                    <input type="text" [(ngModel)]="ital.name" name="name" required>
+                </div>
+                <div class="data-cell">
+                    <button (click)="updateItal(ital)">Mentés</button>
+                    <button (click)="deleteItal(ital)">Törlés</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
