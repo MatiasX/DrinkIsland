@@ -31,7 +31,7 @@ export class TipusComponent {
     this.tipusokService.addTipus(newTipus).subscribe(
       response => {
         console.log('Data updated successfully:', response);
-        // Optionally, reload the data after update
+        this.loadTipusok();
       },
       error => {
         console.error('Error updating data:', error);
@@ -43,7 +43,7 @@ export class TipusComponent {
     this.tipusokService.updateTipus(tipus).subscribe(
       response => {
         console.log('Data updated successfully:', response);
-        // Optionally, reload the data after update
+        this.loadTipusok();
       },
       error => {
         console.error('Error updating data:', error);
@@ -55,7 +55,7 @@ export class TipusComponent {
     this.tipusokService.deleteTipus(tipus).subscribe(
       response => {
         console.log('Data deleted successfully:', response);
-        // Optionally, reload the data after update
+        this.loadTipusok();
       },
       error => {
         console.error('Error deleting data:', error);

@@ -1,68 +1,68 @@
-<div class="whole">
-    <div>
-      <form class="form-row" (submit)="addTipus(newTipus)">
-        <label for="newTipus">Ital id-je:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.ital_id" name="ital_id" required>
-        <label for="newTipus">Téli:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.teli" name="teli" required>
-        <label for="newTipus">Nyári:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.nyari" name="nyari" required>
-        <label for="newTipus">Édes:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.edes" name="edes" required>
-        <label for="newTipus">Savanyú:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.savanyu" name="savanyu" required>
-        <button type="submit">Add</button>
-        <label for="newTipus">Keserű:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.keseru" name="keseru" required>
-        <label for="newTipus">Alkoholos:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.alkoholos" name="alkoholos" required>
-        <label for="newTipus">Alkoholmentes:</label>
-        <input type="number" id="newTipus" [(ngModel)]="newTipus.alkoholmentes" name="alkoholmentes" required>
-      </form>
-  
-      <ul>
-        <li class="header-row">
-          <div class="header-cell">Ital ID</div>
-          <div class="header-cell">Téli</div>
-          <div class="header-cell">Nyári</div>
-          <div class="header-cell">Édes</div>
-          <div class="header-cell">Savanyú</div>
-          <div class="header-cell">Keserű</div>
-          <div class="header-cell">Alkoholos</div>
-          <div class="header-cell">Alkoholmentes</div>
-          <div class="header-cell"></div>
-        </li>
-        <li *ngFor="let tipus of tipusok" class="data-row">
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.ital_id" name="ital_id" required>
-          </div>
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.teli" name="teli" required>
-          </div>
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.nyari" name="nyari" required>
-          </div>
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.edes" name="edes" required>
-          </div>
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.savanyu" name="savanyu" required>
-          </div>
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.keseru" name="keseru" required>
-          </div>
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.alkoholos" name="alkoholos" required>
-          </div>
-          <div class="data-cell">
-            <input type="number" [(ngModel)]="tipus.alkoholmentes" name="alkoholmentes" required>
-          </div>
-          
-          <div class="data-cell">
-            <button (click)="updateTipus(tipus)">Mentés</button>
-            <button (click)="deleteTipus(tipus)">Törlés</button>
-          </div>
-        </li>
-      </ul>
+  <div class="whole">
+      <div>
+        <form class="form-row" (submit)="addTipus(newTipus)">
+          <label for="newTipus">Ital id-je:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.ital_id" name="ital_id" required>
+          <label for="newTipus">Téli:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.teli" name="teli" required>
+          <label for="newTipus">Nyári:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.nyari" name="nyari" required>
+          <label for="newTipus">Édes:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.edes" name="edes" required>
+          <label for="newTipus">Savanyú:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.savanyu" name="savanyu" required>
+          <label for="newTipus">Keserű:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.keseru" name="keseru" required>
+          <label for="newTipus">Alkoholos:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.alkoholos" name="alkoholos" required>
+          <label for="newTipus">Alkoholmentes:</label>
+          <input type="number" id="newTipus" [(ngModel)]="newTipus.alkoholmentes" name="alkoholmentes" required>
+          <button type="submit">Add</button>
+        </form>
+    
+        <ul>
+          <li class="header-row">
+            <div class="header-cell">Ital ID</div>
+            <div class="header-cell">Téli</div>
+            <div class="header-cell">Nyári</div>
+            <div class="header-cell">Édes</div>
+            <div class="header-cell">Savanyú</div>
+            <div class="header-cell">Keserű</div>
+            <div class="header-cell">Alkoholos</div>
+            <div class="header-cell">Alkoholmentes</div>
+            <div class="header-cell"></div>
+          </li>
+          <li *ngFor="let tipus of tipusok" class="data-row">
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.ital_id" name="ital_id" required>
+            </div>
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.teli" name="teli" required>
+            </div>
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.nyari" name="nyari" required>
+            </div>
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.edes" name="edes" required>
+            </div>
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.savanyu" name="savanyu" required>
+            </div>
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.keseru" name="keseru" required>
+            </div>
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.alkoholos" name="alkoholos" required>
+            </div>
+            <div class="data-cell">
+              <input type="number" [(ngModel)]="tipus.alkoholmentes" name="alkoholmentes" required>
+            </div>
+            
+            <div class="data-cell">
+              <button (click)="updateTipus(tipus)">Mentés</button>
+              <button (click)="deleteTipus(tipus)">Törlés</button>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>

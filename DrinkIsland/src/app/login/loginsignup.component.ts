@@ -12,7 +12,7 @@ export class LoginsignupComponent {
 
   constructor(private http: HttpClient) { }
 
-  register(): void {
+  login(): void {
     const userData = {
       username: this.username,
       password: this.password
