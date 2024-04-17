@@ -29,18 +29,10 @@ Route::get('/getAlapanyagByName', [AlapanyagController::class, 'getAlapanyagByNa
 Route::get('/getAlapanyagById', [AlapanyagController::class, 'getAlapanyagById']);
 Route::get('/getAlapanyagok', [AlapanyagController::class, 'getAlapanyagok']);
 
-
-
 Route::get('/getItalByName', [ItalController::class, 'getItalByName']);
 Route::get('/getItalById', [ItalController::class, 'getItalById']);
 Route::get('/getItalok', [ItalController::class, 'getItalok']);
 
-
-Route::get('/getReceptek', [ReceptController::class, 'getReceptek']);
-
-
-
-//http://localhost:8000/api/getAlkoholmentes
 Route::get('/getKoktelok', [KoktelController::class, 'getKoktelok']);
 Route::get('/getTeli', [KoktelController::class, 'getTeli']);
 Route::get('/getNyari', [KoktelController::class, 'getNyari']);
@@ -53,12 +45,10 @@ Route::get('/getReceptByName', [KoktelController::class, 'getReceptByName']);
 
 Route::get('/getTipusByItalId', [TipusController::class, 'getTipusByItalId']);
 Route::get('/getTipusok', [TipusController::class, 'getTipusok']);
-
 //Route::delete('/deleteTipusByItalId', [TipusController::class, 'deleteTipusByItalId']);
 
-
+Route::get('/getReceptek', [ReceptController::class, 'getReceptek']);
 Route::get('/getReceptByAlapanyagId', [ReceptController::class, 'getReceptByAlapanyagId']);
-
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -72,15 +62,19 @@ Route::group(["middleware"=>"auth:sanctum"], function(){
     Route::group(["middleware"=>"admin"], function(){
         Route::get('/getUsers', [ProfileController::class, 'getUsers']);
         Route::put('/setAdmin', [ProfileController::class, 'setAdmin']);
+        
         Route::post('/addAlapanyag', [AlapanyagController::class, 'addAlapanyag']);
         Route::put('/modifyAlapanyag', [AlapanyagController::class, 'modifyAlapanyag']);
         Route::delete('/deleteAlapanyag', [AlapanyagController::class, 'deleteAlapanyag']);
+
         Route::post('/addItal', [ItalController::class, 'addItal']);
         Route::put('/modifyItal', [ItalController::class, 'modifyItal']);
         Route::delete('/deleteItal', [ItalController::class, 'deleteItal']);
+
         Route::post('/addTipus', [TipusController::class, 'addTipus']);
         Route::put('/modifyTipus', [TipusController::class, 'modifyTipus']);
         Route::delete('/deleteTipus', [TipusController::class, 'deleteTipus']);
+
         Route::post('/addRecept', [ReceptController::class, 'addRecept']);
         Route::put('/modifyRecept', [ReceptController::class, 'modifyRecept']);
         Route::delete('/deleteRecept', [ReceptController::class, 'deleteRecept']);
