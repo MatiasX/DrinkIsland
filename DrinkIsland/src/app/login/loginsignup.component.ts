@@ -9,10 +9,10 @@ import { HttpClient } from '@angular/common/http';
 export class LoginsignupComponent {
   username: string = '';
   password: string = '';
-
+  
   constructor(private http: HttpClient) { }
 
-  register(): void {
+  login(): void {
     const userData = {
       username: this.username,
       password: this.password
@@ -22,7 +22,8 @@ export class LoginsignupComponent {
       response => {
         console.log('User logged in successfully:', response);
         localStorage.setItem('authToken', response.success.token);
-        // Optionally, you can redirect the user or perform other actions after successful registration
+        localStorage.setItem('isLoggedIn', 'true');
+        // localStorage.setItem('userData', this.userData);
       },
       error => {
         console.error('Failed to log in user:', error);
