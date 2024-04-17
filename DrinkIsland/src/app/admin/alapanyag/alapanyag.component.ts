@@ -31,6 +31,7 @@ export class AlapanyagokComponent implements OnInit {
     this.alapanyagokService.addAlapanyag(newAlapanyag).subscribe(
       response => {
         console.log('Data updated successfully:', response);
+        this.loadAlapanyagok();
         // Optionally, reload the data after update
       },
       error => {
@@ -43,6 +44,7 @@ export class AlapanyagokComponent implements OnInit {
     this.alapanyagokService.updateAlapanyag(alapanyag).subscribe(
       response => {
         console.log('Data updated successfully:', response);
+        this.loadAlapanyagok();
         // Optionally, reload the data after update
       },
       error => {
@@ -55,6 +57,7 @@ export class AlapanyagokComponent implements OnInit {
     this.alapanyagokService.deleteAlapanyag(alapanyag).subscribe(
       response => {
         console.log('Data deleted successfully:', response);
+        this.loadAlapanyagok();
         // Optionally, reload the data after update
       },
       error => {

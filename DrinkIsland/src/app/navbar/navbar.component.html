@@ -43,17 +43,11 @@
       </ul>
 
       <ul class="navbar-nav">
-        <!-- Ha be van jelentkezve a felhasználó -->
-        <ng-container>
-          <li class="nav-item"><a class="nav-link" (click)="logout()">Kijelentkezés</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="/loginsignup">Bejelentkezés</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="/justsignup">Regisztráció</a></li>
-                </ng-container>
+        <!-- Ha BE van jelentkezve a felhasználó -->
         <ng-container *ngIf="isLoggedIn; else loggedOut">
           <li class="nav-item"><a class="nav-link" (click)="logout()">Kijelentkezés</a></li>
         </ng-container>
-      
-        <!-- Ha nincs bejelentkezve a felhasználó -->
+        <!-- Ha NINCS bejelentkezve a felhasználó -->
         <ng-template #loggedOut>
           <li class="nav-item"><a class="nav-link" routerLink="/loginsignup">Bejelentkezés</a></li>
           <li class="nav-item"><a class="nav-link" routerLink="/justsignup">Regisztráció</a></li>

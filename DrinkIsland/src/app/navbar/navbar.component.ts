@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { LoginService } from './../login.service';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -7,13 +8,12 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   isMenuOpen: boolean = false;
   isLoggedIn: any = false;
+  isAdmin= false;
 
-  constructor(private http: HttpClient, private router:Router) {
-    this.isLoggedIn= localStorage.getItem('isLoggedIn')
-   }
+  constructor(private signIn: LoginService, private router:Router) { }
 
 
   toggleMenu() {
@@ -21,30 +21,13 @@ export class NavbarComponent {
   }
 
   ngOnInit():void{
-    this.isLoggedIn = localStorage.getItem('isLoggedIn') === "true";
+    this.signIn.userLogInsub.subscribe(res => {this.isLoggedIn=res})
+
   }
 
-  logout():void{
-    const authToken = localStorage.getItem('authToken');
-    console.log("Token:", authToken);
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${authToken}`
-    });
-    console.log("headers: ",headers);
-    this.http.post<any>('http://127.0.0.1:8000/api/logout',{},{ headers:headers }).subscribe({
-     next: (response) => {
-      console.log("kiléptem")
-        localStorage.removeItem('authToken');
-        localStorage.removeItem('isLoggedIn');       
-        this.router.navigate(['/loginsignup']);
-
-      },
-     error: error => {
-        console.error('Failed to logout in user:', error);
-        // Optionally, you can display an error message to the user
-      }
-    })
-  }
+ logout(){
+  this.signIn.logout();
+ }
 
 
 }
