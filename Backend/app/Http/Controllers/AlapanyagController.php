@@ -11,10 +11,12 @@ class AlapanyagController extends Controller
 {
     public function addAlapanyag(Request $request){
         $request->validate([
-            'name' => ['required', 'unique:alapanyagok']
+            'name' => ['required', 'unique:alapanyagok'],
+            'unit' => ['required']
         ]);
         $alapanyag=new Alapanyag;
         $alapanyag->name=$request->get('name');
+        $alapanyag->unit = $request->get('unit');
         $alapanyag->save();
         return response()->json(['message'=>'Alapanyag sikeresen hozzáadva', 'data'=>$alapanyag], 201);
     }
