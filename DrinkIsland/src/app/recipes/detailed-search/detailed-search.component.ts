@@ -11,6 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 export class DetailedSearchComponent implements OnInit {
 
   drinks: any;
+  koktel: any={name:''};
 
   constructor(private dataService: DataService) { }
   
@@ -18,9 +19,22 @@ export class DetailedSearchComponent implements OnInit {
     this.getDrinksData();
   }
 
+  searchKoktel(koktel: any){
+    this.dataService.searchKoktel(koktel).subscribe(
+      res => {
+        this.drinks= res;
+        console.log(koktel);
+      },
+      error => {
+        console.error('Error updating data:', error);
+      }
+    );
+  }
+
   getDrinksData() {
     this.dataService.getData().subscribe(res => {
       this.drinks = res;
+      console.log(res);
     })
   }
 

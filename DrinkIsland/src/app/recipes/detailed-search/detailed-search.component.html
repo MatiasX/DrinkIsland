@@ -1,9 +1,23 @@
 <div class="container">
-  <h1 class="text-center">Alkoholos koktélok</h1>
+  <h1 class="text-center">Keresés</h1>
 
+<<<<<<< HEAD
   <div class="row">
     <!-- További koktélok itt -->
     <div *ngFor="let dri of drinks" class="col-md-4 mb-4" id="cards">
+=======
+  <form class="form-row" (submit)="searchKoktel(koktel)">
+    <label for="koktel">Koktél neve:</label>
+    <input type="text" id="koktel" [(ngModel)]="koktel.name" name="name" required>
+    <button type="submit">Keresés</button>
+  </form>
+
+
+  <div class="row">
+    <!-- További koktélok itt -->
+    <div *ngFor="let dri of drinks" class="col-md-4 mb-4">
+      
+>>>>>>> c757c6131b90967e5a7d8136cd024b7df8ff5239
         <div class="card h-100">
           <!-- <img src="assets/img/cosmopolitan.jpg" class="card-img-top" alt="Cosmopolitan"> -->
           <div class="card-body">
@@ -19,6 +33,10 @@
           </div>
           <!-- <p class="card-text">- 40ml Vodka<br>- 15ml Triple Sec<br>- 30ml Áfonyalé<br>- 15ml Lime Juice<br>- Jégkocka</p> -->
         </div>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> c757c6131b90967e5a7d8136cd024b7df8ff5239
     </div>
   </div>
 
