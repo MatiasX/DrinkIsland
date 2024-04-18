@@ -15,7 +15,7 @@ class KoktelController extends Controller
     public function getKoktelok()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->groupBy('italok.name','italok.id')
@@ -32,7 +32,7 @@ class KoktelController extends Controller
     {
         $text=$request->name;
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->where('italok.name', 'like', "%$text%")
@@ -50,7 +50,7 @@ class KoktelController extends Controller
     {
         $name=$italNeve->name;
         $recept = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->where('italok.name', $name)
@@ -66,7 +66,7 @@ class KoktelController extends Controller
     {
         $name=$italNeve->name;
         $recept = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->where('italok.name', $name)
@@ -81,7 +81,7 @@ class KoktelController extends Controller
     public function getTeli()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
@@ -99,7 +99,7 @@ class KoktelController extends Controller
     public function getNyari()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
@@ -117,7 +117,7 @@ class KoktelController extends Controller
     public function getEdes()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
@@ -135,7 +135,7 @@ class KoktelController extends Controller
     public function getSavanyu()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
@@ -153,7 +153,7 @@ class KoktelController extends Controller
     public function getKeseru()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
@@ -171,7 +171,7 @@ class KoktelController extends Controller
     public function getAlkoholos()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
@@ -189,7 +189,7 @@ class KoktelController extends Controller
     public function getAlkoholmentes()
     {
         $receptek = DB::table('italok')
-            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", CONCAT(receptek.amount, " ", alapanyagok.unit),"\"")),"}") AS Recept'))
             ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
             ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
             ->join('tipus', 'italok.id', '=', 'tipus.ital_id')
