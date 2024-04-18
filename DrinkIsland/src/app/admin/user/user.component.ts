@@ -28,7 +28,7 @@ export class UserComponent {
     this.adminService.setAdmin(user).subscribe(
       response => {
         console.log('Data updated successfully:', response);
-        // Optionally, reload the data after update
+        this.loadUserek();
       },
       error => {
         console.error('Error updating data:', error);

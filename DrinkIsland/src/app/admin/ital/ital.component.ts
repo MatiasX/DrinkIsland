@@ -31,7 +31,7 @@ export class ItalComponent {
     this.italokService.addItal(newItal).subscribe(
       response => {
         console.log('Data updated successfully:', response);
-        // Optionally, reload the data after update
+        this.loadItalok();
       },
       error => {
         console.error('Error updating data:', error);
@@ -43,7 +43,7 @@ export class ItalComponent {
     this.italokService.updateItal(ital).subscribe(
       response => {
         console.log('Data updated successfully:', response);
-        // Optionally, reload the data after update
+        this.loadItalok();
       },
       error => {
         console.error('Error updating data:', error);
@@ -55,7 +55,7 @@ export class ItalComponent {
     this.italokService.deleteItal(ital).subscribe(
       response => {
         console.log('Data deleted successfully:', response);
-        // Optionally, reload the data after update
+        this.loadItalok();
       },
       error => {
         console.error('Error deleting data:', error);

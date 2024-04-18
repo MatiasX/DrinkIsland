@@ -24,8 +24,4 @@ export class DetailedSearchComponent implements OnInit {
     })
   }
 
-  insertData() {
-    console.log("ahoi");
-  }
-
 }

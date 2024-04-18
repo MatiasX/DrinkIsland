@@ -1,6 +1,5 @@
-import { LoginService } from './../login.service';
+import { LoginService } from '../services/login.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit():void{
     this.signIn.userLogInsub.subscribe(res => {this.isLoggedIn=res})
-
+    this.signIn.userIsAdmin.subscribe(res => {this.isAdmin=res})
   }
 
  logout(){

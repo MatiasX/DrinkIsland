@@ -43,7 +43,7 @@ class TipusController extends Controller
     }
     public function modifyTipus(Request $request){
         $request->validate([
-            'ital_id' => ['required', 'unique:tipus'],
+            'ital_id' => 'required',
             'teli' => 'required',
             'nyari' => 'required',
             'edes' => 'required',
@@ -57,7 +57,6 @@ class TipusController extends Controller
         if (is_null($tipus)) {
             return response()->json(['message'=>'Hiba a bejövő paraméterekben. Nincs ilyen id-jű Típus.', 'id'=>$id], 202);
         }
-        $tipus->ital_id=$request->input('ital_id');
         $tipus->teli=$request->input('teli');
         $tipus->nyari=$request->input('nyari');
         $tipus->edes=$request->input('edes');

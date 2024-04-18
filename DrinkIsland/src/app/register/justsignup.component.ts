@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-justsignup',
@@ -12,7 +13,7 @@ export class JustsignupComponent {
   password: string = '';
   passwordConfirmation: string = '';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   register(): void {
     const userData = {
@@ -25,6 +26,7 @@ export class JustsignupComponent {
     this.http.post<any>('http://127.0.0.1:8000/api/register', userData).subscribe(
       response => {
         console.log('User registered successfully:', response);
+        this.router.navigate(['/loginsignup']);
         // Optionally, you can redirect the user or perform other actions after successful registration
       },
       error => {

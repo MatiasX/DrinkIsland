@@ -31,7 +31,7 @@ export class ReceptComponent {
     this.receptekService.addRecept(newRecept).subscribe(
       response => {
         console.log('Data updated successfully:', response);
-        // Optionally, reload the data after update
+        this.loadReceptek();
       },
       error => {
         console.error('Error updating data:', error);
@@ -43,7 +43,7 @@ export class ReceptComponent {
     this.receptekService.updateRecept(recept).subscribe(
       response => {
         console.log('Data updated successfully:', response);
-        // Optionally, reload the data after update
+        this.loadReceptek();
       },
       error => {
         console.error('Error updating data:', error);
@@ -55,7 +55,7 @@ export class ReceptComponent {
     this.receptekService.deleteRecept(recept).subscribe(
       response => {
         console.log('Data deleted successfully:', response);
-        // Optionally, reload the data after update
+        this.loadReceptek();
       },
       error => {
         console.error('Error deleting data:', error);

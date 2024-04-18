@@ -19,7 +19,6 @@ export class ReceptekService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
-    console.log(headers);
     return this.http.post<any>(this.baseUrl + 'addRecept', recept, { headers });
   }
 

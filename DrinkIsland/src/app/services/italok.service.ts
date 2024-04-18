@@ -19,7 +19,6 @@ export class ItalokService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
-    console.log(headers);
     return this.http.post<any>(this.baseUrl + 'addItal', ital, { headers });
   }
 

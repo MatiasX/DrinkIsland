@@ -17,22 +17,35 @@ export class LoginService {
         console.log('User logged in successfully: response:  ', response);
         localStorage.setItem('authToken', response.success.token);
         localStorage.setItem('isLoggedIn', 'true');
-
-        // isadmin lekértése
-
-
         this.userLogInsub.next(true);
+        this.isAdmin();
+        
+
         this.router.navigate(['/']);
         // localStorage.setItem('userData', this.userData);
       },
       error => {
         console.error('Failed to log in user:', error);
         this.userLogInsub.next(false);
-        // Optionally, you can display an error message to the user
       }
     );
   }
   
+  isAdmin(){
+    const authToken = localStorage.getItem('authToken');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${authToken}`
+    });
+    this.http.get<any>('http://127.0.0.1:8000/api/getUserProfileData', { headers }).subscribe(
+      response => {
+        if(response.username.is_admin==1){this.userIsAdmin.next(true); }
+      },
+      error =>{
+        console.error(error);
+      }
+    )
+  }
+
   logout():void{
     const authToken = localStorage.getItem('authToken');
     console.log("Token:", authToken);
