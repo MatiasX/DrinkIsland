@@ -13,9 +13,14 @@ export class DataService {
   }
 
   searchKoktel(name: any){
-    var res=this.httpClient.get(this.baseUrl + 'searchKoktelokByName?name='+name.name);
-    console.log(name);
-    return res;
+    return this.httpClient.get(this.baseUrl + 'searchKoktelokByName?name='+name.name);
   }
 
+  getAlcoholicData(){
+    return this.httpClient.get(this.baseUrl + 'getAlkoholos');
+  }
+
+  getNonAlcoholicData(){
+    return this.httpClient.get(this.baseUrl + 'getAlkoholmentes');
+  }
 }

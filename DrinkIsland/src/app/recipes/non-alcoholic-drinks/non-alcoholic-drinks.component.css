@@ -1,6 +1,21 @@
-*{
-    background-color: gray;
+.container {
+    margin-top: 50px;
+    padding-top: 15px;
 }
-.box{
-    background-color: aqua;
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.card-img-top {
+    border-radius: 0.5rem 0.5rem 0 0;
 }

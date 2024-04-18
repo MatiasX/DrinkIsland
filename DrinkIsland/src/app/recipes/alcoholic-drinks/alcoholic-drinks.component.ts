@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,21 +7,19 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./alcoholic-drinks.component.css']
 })
 export class AlcoholicDrinksComponent implements OnInit {
-  drinks:any;
+  drinks: any;
+  koktel: any={name:''};
+
+  constructor(private dataService: DataService) { }
   
-
-  constructor(private dataService:DataService) { }
   ngOnInit(): void {
-    this.getDrinksData();
+    this.getAlcoholicDrinksData();
   }
 
-  getDrinksData(){
-    this.dataService.getData().subscribe(res =>{
+  getAlcoholicDrinksData() {
+    this.dataService.getAlcoholicData().subscribe(res => {
       this.drinks = res;
+      console.log(res);
     })
-  }
-
-  insertData(){
-    console.log("ahoi");
   }
 }

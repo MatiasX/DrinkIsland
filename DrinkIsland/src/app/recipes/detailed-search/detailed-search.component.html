@@ -1,44 +1,41 @@
 <div class="container">
   <h1 class="text-center">Koktél Katalógus</h1>
-    <!-- További koktélok itt -->
-    <div class="introduce">
-      <div class="row align-items-center">
-        <div class="col">
-          <h2>Itt böngészhetsz a koktélok között</h2>
-        </div>
-        <div class="col">
-          <form class="form-row justify-content-end" (submit)="searchKoktel(koktel)">
-            <label for="koktel">Koktél neve:</label>
-            <input type="text" id="koktel" [(ngModel)]="koktel.name" name="name" required>
-            <button type="submit">Keresés</button>
-          </form>
-        </div>
+  <div class="introduce">
+    <div class="row align-items-center">
+      <div class="col">
+        <h2>Itt böngészhetsz a koktélok között</h2>
+      </div>
+      <div class="col">
+        <form class="form-row justify-content-end" (submit)="searchKoktel(koktel)">
+          <label for="koktel">Koktél neve:</label>
+          <input type="text" id="koktel" [(ngModel)]="koktel.name" name="name" required>
+          <button type="submit">Keresés</button>
+        </form>
       </div>
     </div>
-    
+  </div>
+
 
   <div class="row">
-    <!-- További koktélok itt -->
     <div *ngFor="let dri of drinks" class="col-md-4 mb-4">
-        <div class="card h-100">
-          <!-- <img src="assets/img/cosmopolitan.jpg" class="card-img-top" alt="Cosmopolitan"> -->
-          <div class="card-body">
-            <h2 class="card-title">{{dri.Ital}}</h2>
-            <p class="card-text">Leírása az italoknak.</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Recept
-              </button>
-              <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
-                <ul>
-                  <li *ngFor="let ingredient of dri.Recept | keyvalue" id="custom-dropdown">
-                    <p>{{ ingredient.key }}: {{ ingredient.value }} cl vagy cl</p>
-                  </li>
-                </ul>
-              </div>
-            </div>    
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">{{dri.Ital}}</h2>
+          <p class="card-text">Leírása az italoknak.</p>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle w-100" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Recept
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <ul>
+                <li *ngFor="let ingredient of dri.Recept | keyvalue" id="custom-dropdown">
+                  <p>{{ ingredient.key }}: {{ ingredient.value }}</p>
+                </li>
+              </ul>
+            </div>
           </div>
-          <!-- <p class="card-text">- 40ml Vodka<br>- 15ml Triple Sec<br>- 30ml Áfonyalé<br>- 15ml Lime Juice<br>- Jégkocka</p> -->
         </div>
+      </div>
     </div>
   </div>
