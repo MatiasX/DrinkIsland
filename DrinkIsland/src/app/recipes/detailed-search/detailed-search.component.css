@@ -8,18 +8,50 @@
     max-width: 800px;
     padding-top: 50px;
     margin: 0 auto;
-  }
-  
-  .card {
-    border: 1px solid #000000;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .list-group-item {
-    background-color: transparent;
-    border: none;
-  }
+    background-color:black;
+    color:red;
+}
+
+.card {
+  border: 1px solid #000000;
+  background-color: orange;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+}
+ ul li{
+  text-decoration: none;
+}
+.row{
+  margin-top: 30px;
+}
+
+#custom-dropdown{
+  width: 200px;
+  list-style:circle;
+}
+
+.introduce form{
+  display: flex;
+  text-align: right;
+}
+
+h1{
+  margin-top: 10px;
+  font-size: 30px;
+}
+.dropdown-menu{
+  background-color: purple;
+}
+
+.col form label{
+  padding-top: 5px;
+  padding-right:5px;
+}

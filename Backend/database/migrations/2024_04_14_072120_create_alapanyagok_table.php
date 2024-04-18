@@ -14,11 +14,8 @@ return new class extends Migration
         Schema::create('alapanyagok', function (Blueprint $table) {
             $table->id();
             $table->string( "name" , 50 );
-<<<<<<< HEAD
             $table->string("unit",50);
-=======
-            $table->string( "unit" , 50 );
->>>>>>> c757c6131b90967e5a7d8136cd024b7df8ff5239
+
             //$table->timestamps();
         });
     }
