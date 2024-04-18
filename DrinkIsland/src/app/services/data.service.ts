@@ -6,9 +6,16 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   constructor(private httpClient:HttpClient) {}
+  private baseUrl = 'http://localhost:8000/api/';
 
   getData(){
-    return this.httpClient.get('http://localhost:8000/api/getKoktelok');
+    return this.httpClient.get(this.baseUrl + 'getKoktelok');
+  }
+
+  searchKoktel(name: any){
+    var res=this.httpClient.get(this.baseUrl + 'searchKoktelokByName?name='+name.name);
+    console.log(name);
+    return res;
   }
 
 }

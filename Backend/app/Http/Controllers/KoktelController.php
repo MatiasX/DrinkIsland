@@ -28,6 +28,24 @@ class KoktelController extends Controller
         return response()->json($receptek);
     }
 
+    public function searchKoktelokByName(Request $request)
+    {
+        $text=$request->name;
+        $receptek = DB::table('italok')
+            ->select('italok.name AS Ital', DB::raw('CONCAT("{",GROUP_CONCAT(CONCAT("\"",alapanyagok.name, "\": \"", receptek.amount,"\"")),"}") AS Recept'))
+            ->join('receptek', 'italok.id', '=', 'receptek.ital_id')
+            ->join('alapanyagok', 'receptek.alapanyag_id', '=', 'alapanyagok.id')
+            ->where('italok.name', 'like', "%$text%")
+            ->groupBy('italok.name','italok.id')
+            ->get();
+        
+        foreach($receptek as &$recept){
+            $recept->Recept=json_decode($recept->Recept);
+        }
+
+        return response()->json($receptek);
+    }
+
     public function getReceptByName(Request $italNeve)
     {
         $name=$italNeve->name;

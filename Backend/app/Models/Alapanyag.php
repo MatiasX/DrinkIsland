@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Alapanyag extends Model
 {
     protected $table = 'alapanyagok';
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'unit'];
     public $timestamps = false;
 
     public function receptek()

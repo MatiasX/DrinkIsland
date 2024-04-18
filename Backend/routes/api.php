@@ -42,6 +42,7 @@ Route::get('/getKeseru', [KoktelController::class, 'getKeseru']);
 Route::get('/getAlkoholos', [KoktelController::class, 'getAlkoholos']);
 Route::get('/getAlkoholmentes', [KoktelController::class, 'getAlkoholmentes']);
 Route::get('/getReceptByName', [KoktelController::class, 'getReceptByName']);
+Route::get('/searchKoktelokByName', [KoktelController::class, 'searchKoktelokByName']);
 
 Route::get('/getTipusByItalId', [TipusController::class, 'getTipusByItalId']);
 Route::get('/getTipusok', [TipusController::class, 'getTipusok']);
