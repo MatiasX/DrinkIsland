@@ -15,12 +15,14 @@
   color: #666;
 }
 
-.btn-primary {
-  background-color: #007bff;
+.btn-info {
+  background-color: #00bbef;
   color: #fff;
+  border-style: outset;
+  border-width: 4px;
 }
 
-.btn-primary:hover {
+.btn-info:hover {
   background-color: #0056b3;
 }
 
