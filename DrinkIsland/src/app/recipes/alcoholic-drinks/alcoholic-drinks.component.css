@@ -19,3 +19,15 @@
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
+.bod{
+  width: 100%;
+  height: auto;
+  background: url(../../../assets/img/12.jpg);
+  background-position: center;
+
+}
+.container {
+  padding-top: 50px;
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+}

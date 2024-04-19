@@ -1,6 +1,7 @@
 .container {
     margin-top: 50px;
     padding-top: 15px;
+
 }
 
 .card {
@@ -18,4 +19,18 @@
 
 .card-img-top {
     border-radius: 0.5rem 0.5rem 0 0;
+}
+.container {
+    max-width: 800px;
+    padding-top: 50px;
+    margin: 0 auto;
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+}
+.bod{
+  width: 100%;
+  height: auto;
+  background: url(../../../assets/img/12.jpg);
+  background-position: center;
+
 }
