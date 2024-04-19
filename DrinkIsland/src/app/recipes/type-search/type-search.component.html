@@ -1,11 +1,21 @@
+<div class="bod">
+<div class="container">
+    
 <div class="search">
-    <label for="searchFunction">Válassz egy szűrést:</label>
-    <select id="searchFunction" [(ngModel)]="selected" (change)="search()">
-        <option *ngFor="let function of searchFunctions" [value]="function">{{ function }}</option>
-    </select>
+    <h1>Mikor érdemes inni ezeket a koktélokat?</h1>
+    <div class="select">
+        <p>{{ selected }} Koktélok:</p>
+    <div class="select1">
+        <label for="searchFunction">Válassz egy szűrést:</label>
+        <select id="searchFunction" [(ngModel)]="selected" (change)="search()">
+            <option *ngFor="let function of searchFunctions" [value]="function">{{ function }}</option>
+        </select>
+    </div>
+    </div>
+    
 </div>
 
-<p>{{ selected }} Koktélok:</p>
+
 
 <div class="row">
     <div *ngFor="let dri of drinks" class="col-md-4 mb-4">
@@ -29,4 +39,6 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>

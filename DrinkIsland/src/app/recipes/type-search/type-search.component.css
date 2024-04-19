@@ -1,3 +1,39 @@
-.search{
+.container{
     margin-top: 50px;
+    padding-top: 30px;
+}
+
+.bod{
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/img/12.jpg);
+    background-position: center;
+  
+  }
+  .container {
+    max-width: 800px;
+    padding-top: 50px;
+    margin: 0 auto;
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+}
+
+.select{
+    display: flex;
+    justify-content: space-between;
+}
+
+#searchfunction{
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.select p{
+    font-size: 20px;
+    margin-left: 40%;
 }
