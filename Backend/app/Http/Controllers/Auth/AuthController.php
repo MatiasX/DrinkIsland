@@ -11,7 +11,6 @@ use Illuminate\Validation\Rules\Password;
 class AuthController extends Controller
 {
     public function register( Request $request ) {
-        //return $request;
         $request->validate([
             'username' => ['required', 'max:50', 'unique:users'],
             'email' => ['required'],

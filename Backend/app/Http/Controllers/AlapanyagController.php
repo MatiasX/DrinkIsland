@@ -38,7 +38,9 @@ class AlapanyagController extends Controller
 
     public function modifyAlapanyag(Request $request){
         $request->validate([
-            'name' => ['required', 'unique:alapanyagok']
+            'id' => ['required'],
+            'name' => ['required', 'unique:alapanyagok'],
+            'unit' => ['required']
         ]);
         $id = $request->id;
         $alapanyag = Alapanyag::find($id);
@@ -46,6 +48,7 @@ class AlapanyagController extends Controller
             return response()->json(['message'=>'Hiba a bejövő paraméterekben. Nincs ilyen id-jű Alapanyag.', 'id'=>$id], 202);
         }
         $alapanyag->name=$request->get('name');
+        $alapanyag->unit=$request->get('unit');
         $alapanyag->save();
         return response()->json(['message'=>'Alapanyag sikeresen módosítva', 'data'=>$alapanyag], 201);
     }
