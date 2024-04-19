@@ -8,7 +8,6 @@ import { AlcoholicDrinksComponent } from './recipes/alcoholic-drinks/alcoholic-d
 import { NonAlcoholicDrinksComponent } from './recipes/non-alcoholic-drinks/non-alcoholic-drinks.component';
 import { DetailedSearchComponent } from './recipes/detailed-search/detailed-search.component';
 import { TypeSearchComponent } from './recipes/type-search/type-search.component';
-import { IngredientsComponent } from './coctailblog/ingredients.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginsignupComponent } from './login/loginsignup.component';
 import { JustsignupComponent } from './register/justsignup.component';
@@ -30,7 +29,6 @@ const routes: Routes = [
   { path: 'recipes/non-alcoholic', component: NonAlcoholicDrinksComponent },
   { path: 'recipes/detailed-search', component: DetailedSearchComponent },
   { path: 'recipes/type-search', component: TypeSearchComponent },
-  { path: 'coctailblog', component: IngredientsComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'userBlog', component: UserBlogComponent },
   { path: 'calculator', component: CalculatorComponent },
