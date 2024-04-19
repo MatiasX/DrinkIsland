@@ -18,7 +18,6 @@ import { AlcoholicDrinksComponent } from './recipes/alcoholic-drinks/alcoholic-d
 import { NonAlcoholicDrinksComponent } from './recipes/non-alcoholic-drinks/non-alcoholic-drinks.component';
 import { DetailedSearchComponent } from './recipes/detailed-search/detailed-search.component';
 import { LoginsignupComponent } from './login/loginsignup.component';
-import { SupportComponent } from './support/support.component';
 import { JustsignupComponent } from './register/justsignup.component';
 import { AlapanyagokComponent } from './admin/alapanyag/alapanyag.component';
 import { ItalComponent } from './admin/ital/ital.component';
@@ -48,7 +47,6 @@ const appRoutes: Routes = [
     NonAlcoholicDrinksComponent,
     DetailedSearchComponent,
     LoginsignupComponent,
-    SupportComponent,
     JustsignupComponent,
     AlapanyagokComponent,
     ItalComponent,
