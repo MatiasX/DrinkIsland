@@ -23,7 +23,6 @@ export class DetailedSearchComponent implements OnInit {
     this.dataService.searchKoktel(koktel).subscribe(
       res => {
         this.drinks= res;
-        console.log(koktel);
       },
       error => {
         console.error('Error updating data:', error);
@@ -34,7 +33,6 @@ export class DetailedSearchComponent implements OnInit {
   getDrinksData() {
     this.dataService.getData().subscribe(res => {
       this.drinks = res;
-      console.log(res);
     })
   }
 

@@ -32,7 +32,6 @@ export class AlapanyagokComponent implements OnInit {
       response => {
         console.log('Data updated successfully:', response);
         this.loadAlapanyagok();
-        // Optionally, reload the data after update
       },
       error => {
         console.error('Error updating data:', error);
@@ -45,7 +44,6 @@ export class AlapanyagokComponent implements OnInit {
       response => {
         console.log('Data updated successfully:', response);
         this.loadAlapanyagok();
-        // Optionally, reload the data after update
       },
       error => {
         console.error('Error updating data:', error);
@@ -58,7 +56,6 @@ export class AlapanyagokComponent implements OnInit {
       response => {
         console.log('Data deleted successfully:', response);
         this.loadAlapanyagok();
-        // Optionally, reload the data after update
       },
       error => {
         console.error('Error deleting data:', error);

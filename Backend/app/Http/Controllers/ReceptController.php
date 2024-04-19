@@ -28,7 +28,6 @@ class ReceptController extends Controller
     }
 
     public function getReceptByAlapanyagId(Request $request){
-        //használatban van-e az alapanyag
         $current=Recept::where("alapanyag_id",$request->get('id'))->first();
         return $current;
     }

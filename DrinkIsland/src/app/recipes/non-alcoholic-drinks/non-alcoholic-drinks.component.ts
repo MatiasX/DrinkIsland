@@ -19,7 +19,6 @@ export class NonAlcoholicDrinksComponent implements OnInit {
   getNonAlcoholicDrinksData() {
     this.dataService.getNonAlcoholicData().subscribe(res => {
       this.drinks = res;
-      console.log(res);
     })
   }
 }

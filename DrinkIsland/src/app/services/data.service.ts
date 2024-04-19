@@ -23,4 +23,25 @@ export class DataService {
   getNonAlcoholicData(){
     return this.httpClient.get(this.baseUrl + 'getAlkoholmentes');
   }
+
+  getTeliData(){
+    return this.httpClient.get(this.baseUrl + 'getTeli');
+  }
+  
+  getNyariData(){
+    return this.httpClient.get(this.baseUrl + 'getNyari');
+  }
+  
+  getEdesData(){
+    return this.httpClient.get(this.baseUrl + 'getEdes');
+  }
+  
+  getSavanyuData(){
+    return this.httpClient.get(this.baseUrl + 'getSavanyu');
+  }
+  
+  getKeseruData(){
+    return this.httpClient.get(this.baseUrl + 'getKeseru');
+  }
+  
 }

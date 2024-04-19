@@ -19,7 +19,6 @@ export class AlcoholicDrinksComponent implements OnInit {
   getAlcoholicDrinksData() {
     this.dataService.getAlcoholicData().subscribe(res => {
       this.drinks = res;
-      console.log(res);
     })
   }
 }

@@ -19,12 +19,14 @@
             Recipes
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" routerLink="/recipes/alcoholic">Alcoholic Drinks</a></li>
-            <li><a class="dropdown-item" routerLink="/recipes/non-alcoholic">Non-Alcoholic Drinks</a></li>
-            <li><a class="dropdown-item" routerLink="/recipes/detailed-search">Detailed Search</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/alcoholic">Alkoholos Koktélok</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/non-alcoholic">Alkoholmentes Koktélok</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/type-search">Keresés típus alapján</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/detailed-search">Keresés név alapján</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" routerLink="/coctailblog">Coctail Blog</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/blog">Coctail Blog</a></li>
+        <li class="nav-item" *ngIf="isLoggedIn"><a class="nav-link" routerLink="/userBlog">Saját Posztok</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="/calculator">Alcohol Calculator</a></li>
         <li class="nav-item"><a class="nav-link disabled" routerLink="/support">Segítség</a></li>
         <li class="nav-item dropdown" *ngIf="isAdmin">
@@ -37,6 +39,7 @@
             <li><a class="dropdown-item" routerLink="/admin/ital">Ital</a></li>
             <li><a class="dropdown-item" routerLink="/admin/recept">Recept</a></li>
             <li><a class="dropdown-item" routerLink="/admin/tipus">Típus</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/blog">Blog</a></li>
             <li><a class="dropdown-item" routerLink="/admin/user">User</a></li>
           </ul>
         </li>

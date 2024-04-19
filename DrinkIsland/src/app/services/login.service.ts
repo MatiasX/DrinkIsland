@@ -7,11 +7,11 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  public userLogInsub= new BehaviorSubject<any>(false);
+  public userLogInsub = new BehaviorSubject<any>(false);
   public userIsAdmin = new BehaviorSubject<any>(false);
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
-  signIn(body:any){
+  signIn(body: any) {
     this.http.post<any>('http://127.0.0.1:8000/api/login', body).subscribe(
       response => {
         console.log('User logged in successfully: response:  ', response);
@@ -19,7 +19,7 @@ export class LoginService {
         localStorage.setItem('isLoggedIn', 'true');
         this.userLogInsub.next(true);
         this.isAdmin();
-        
+
 
         this.router.navigate(['/']);
         // localStorage.setItem('userData', this.userData);
@@ -30,42 +30,42 @@ export class LoginService {
       }
     );
   }
-  
-  isAdmin(){
+
+  isAdmin() {
     const authToken = localStorage.getItem('authToken');
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
     this.http.get<any>('http://127.0.0.1:8000/api/getUserProfileData', { headers }).subscribe(
       response => {
-        if(response.username.is_admin==1){this.userIsAdmin.next(true); }
+        localStorage.setItem('user_id', response.username.id);
+        if (response.username.is_admin == 1) { this.userIsAdmin.next(true); }
       },
-      error =>{
+      error => {
         console.error(error);
       }
     )
   }
 
-  logout():void{
+  logout(): void {
     const authToken = localStorage.getItem('authToken');
-    console.log("Token:", authToken);
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
-    console.log("headers: ",headers);
-    this.http.post<any>('http://127.0.0.1:8000/api/logout',{},{ headers:headers }).subscribe({
-     next: (response) => {
-      console.log("kiléptem")
+    this.http.post<any>('http://127.0.0.1:8000/api/logout', {}, { headers: headers }).subscribe({
+      next: (response) => {
+        console.log("kiléptem")
         localStorage.removeItem('authToken');
-        localStorage.removeItem('isLoggedIn'); 
-        this.userLogInsub.next(false);  
-        this.userIsAdmin.next(false);    
+        localStorage.removeItem('isLoggedIn');
+        this.userLogInsub.next(false);
+        this.userIsAdmin.next(false);
         this.router.navigate(['/loginsignup']);
 
       },
-     error: error => {
+      error: error => {
         console.error('Failed to logout in user:', error);
         // Optionally, you can display an error message to the user
       }
     })
-  }}
+  }
+}

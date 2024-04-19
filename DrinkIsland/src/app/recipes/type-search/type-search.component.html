@@ -1,0 +1,32 @@
+<div class="search">
+    <label for="searchFunction">Válassz egy szűrést:</label>
+    <select id="searchFunction" [(ngModel)]="selected" (change)="search()">
+        <option *ngFor="let function of searchFunctions" [value]="function">{{ function }}</option>
+    </select>
+</div>
+
+<p>{{ selected }} Koktélok:</p>
+
+<div class="row">
+    <div *ngFor="let dri of drinks" class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">{{dri.Ital}}</h2>
+                <p class="card-text">Leírása az italoknak.</p>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle w-100" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Recept
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li *ngFor="let ingredient of dri.Recept | keyvalue" id="custom-dropdown">
+                                <p>{{ ingredient.key }}: {{ ingredient.value }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

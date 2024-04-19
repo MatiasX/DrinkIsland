@@ -25,6 +25,10 @@ import { ItalComponent } from './admin/ital/ital.component';
 import { ReceptComponent } from './admin/recept/recept.component';
 import { UserComponent } from './admin/user/user.component';
 import { TipusComponent } from './admin/tipus/tipus.component';
+import { BlogComponent } from './blog/blog.component';
+import { AdminBlogComponent } from './admin/admin-blog/admin-blog.component';
+import { UserBlogComponent } from './user-blog/user-blog.component';
+import { TypeSearchComponent } from './recipes/type-search/type-search.component';
 
 
 const appRoutes: Routes = [
@@ -50,7 +54,11 @@ const appRoutes: Routes = [
     ItalComponent,
     ReceptComponent,
     UserComponent,
-    TipusComponent
+    TipusComponent,
+    BlogComponent,
+    AdminBlogComponent,
+    UserBlogComponent,
+    TypeSearchComponent
   ],
   imports: [
     NgbModule,

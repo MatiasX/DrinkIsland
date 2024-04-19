@@ -141,5 +141,30 @@ INSERT INTO `tipus` (`ital_id`, `teli`, `nyari`, `edes`, `savanyu`, `keseru`, `a
 (11, 0, 1, 1, 1, 1, 1, 0),
 (12, 0, 1, 1, 1, 0, 0, 1);
 
+INSERT INTO `posts` (`user_id`,`title`,`text`) VALUES
+(1, 'Koktél Poharak: A Koktélozás Egyedi Hangulata', 'A koktélozás művészete nem csupán az italok kiválasztásáról és keveréséről szól, hanem az esztétikáról és az élményről is. A megfelelő pohár kiválasztása lényeges része ennek az élménynek, hiszen segít kiemelni az italok ízét és megjelenését.
+Néhány fontos dolog, amit érdemes tudni a koktél poharakról:
+
+1. Forma és Méret: A poharak formája és mérete jelentősen befolyásolja az ital prezentációját és az ízélményt.
+2. Anyag: Minőségi üvegpoharak jobban tartják a hőt és a hideget, és hozzájárulnak az italok ízének megőrzéséhez.
+3. Díszítés és Kiegészítők: Citrus héj, koktélbogyók, színes szívószálak és egyéb dekorációk segítenek fokozni az ital vizuális vonzerejét.
+4. Szokatlan formák és különleges poharak: Ezek a poharak hozzájárulnak az élmény különlegességéhez és egyediségéhez.
+- A megfelelő koktél poharak kiválasztása és használata tehát nem csupán az ital szervírozásáról szól, hanem az egész koktélozás élményének fokozásáról.'),
+(1, 'Koktél Alapanyagok: Az Ízek Mesterei', 'A koktélkészítés művészete sokféle alapanyag összehangolását igényli, hogy azokból az ízekből és illatokból harmonikus italok születhessenek. Néhány alapvető, ám rendkívül fontos alapanyag, amelyek nélkül elképzelhetetlen lenne a koktélvilág:
+
+ Citrusok: A friss citrusok, mint a citrom, lime és narancs, alapvető fontosságúak a koktélkészítésben.
+ Szirupok és Likőrök: Különféle szirupok és likőrök, mint például a cukorszirup, grenadine, triple sec és édes likőrök.
+ Alkoholok: A vodka, rum, tequila, gin, whisky és egyéb alkoholok különféle ízvilágot és karaktert adnak az italoknak.
+ Bitterek és Aromás Szerek: Az Angostura és egyéb bitterek, valamint fűszerek, mint a menta, bazsalikom, és szegfűszeg.
+ Szószok és Szószok: Például a Worcestershire szósz, Tabasco és egyéb szószok sokféle koktélhoz használhatóak.
+- Az alapanyagok kreatív kombinációja és azok megfelelő egyensúlya teszi lehetővé a koktélkészítésben való mesterségesítést. Mindegyik alapanyag sajátos ízével és tulajdonságaival hozzájárul az italok különlegességéhez és ízletes karakteréhez.'),
+(1, 'Bartender Eszközei: A Profizmus Alapjai', 'A bartender eszközei nélkülözhetetlenek a professzionális koktélkészítéshez. Ezek a szerszámok segítik a pontos mérésben, keverésben és szervírozásban, és hozzájárulnak az italok minőségéhez és ízélményéhez.
+
+ Shaker: Az egyik legfontosabb eszköz a bartender számára, segítségével keverhetők és rázhatók össze az italok.
+ Mérőpohár: Pontos mennyiségek mérésére használt eszköz, amely elengedhetetlen a kiegyensúlyozott koktélokhoz.
+ Barléc: Egyenes vagy hajlított, a pult fölé szerelhető rúd, amelyre a poharak és eszközök függeszthetők, hogy helyet takarítsanak meg.
+ Strainer: Szűrőeszköz, amely segít leszűrni az italokat a shakerből a pohárba, hogy megakadályozza a jég és az összetevők maradékainak bejutását.
+ Jégkocka Forma: Különböző méretű és formájú jégkockák készítésére szolgáló forma, amelyek fontosak az italok hűtéséhez.
+- A megfelelő eszközök használata és kezelése segíti a bartendereket a hatékony és minőségi italkészítésben, és hozzájárul az italok professzionális színvonalához.');
 
 /*UPDATE users SET is_admin=1 WHERE id=1;*/

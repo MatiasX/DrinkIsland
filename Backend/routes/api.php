@@ -9,6 +9,7 @@ use App\Http\Controllers\TipusController;
 use App\Http\Controllers\ReceptController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,12 +56,20 @@ Route::get('/getReceptByAlapanyagId', [ReceptController::class, 'getReceptByAlap
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
+Route::get('/getPosts', [PostController::class, 'getPosts']);
+
 
 Route::group(["middleware"=>"auth:sanctum"], function(){
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/getUserProfileData', [ProfileController::class, 'getUserProfileData']);
     Route::put('/setNewPassword', [ProfileController::class, 'setNewPassword']);
     Route::delete('/deleteAccount', [ProfileController::class, 'deleteAccount']);
+    
+    Route::get('/getPostsByUserId', [PostController::class, 'getPostsByUserId']);
+    Route::post('/addPost', [PostController::class, 'addPost']);
+    Route::put('/modifyPost', [PostController::class, 'modifyPost']);
+    Route::delete('/deletePost', [PostController::class, 'deletePost']);
+
     Route::group(["middleware"=>"admin"], function(){
         Route::get('/getUsers', [ProfileController::class, 'getUsers']);
         Route::put('/setAdmin', [ProfileController::class, 'setAdmin']);

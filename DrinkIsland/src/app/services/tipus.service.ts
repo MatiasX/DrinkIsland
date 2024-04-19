@@ -19,7 +19,6 @@ export class TipusService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
-    console.log(headers);
     return this.http.post<any>(this.baseUrl + 'addTipus', tipus, { headers });
   }
 
