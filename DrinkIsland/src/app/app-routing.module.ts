@@ -12,7 +12,6 @@ import { IngredientsComponent } from './coctailblog/ingredients.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoginsignupComponent } from './login/loginsignup.component';
 import { JustsignupComponent } from './register/justsignup.component';
-import { SupportComponent } from './support/support.component';
 import { AlapanyagokComponent } from './admin/alapanyag/alapanyag.component';
 import { ItalComponent } from './admin/ital/ital.component';
 import { ReceptComponent } from './admin/recept/recept.component';
@@ -37,7 +36,6 @@ const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
   { path: 'loginsignup', component: LoginsignupComponent },
   { path: 'justsignup', component: JustsignupComponent },
-  { path: 'support', component: SupportComponent },
   { path: 'admin/alapanyag', component: AlapanyagokComponent },
   { path: 'admin/ital', component: ItalComponent },
   { path: 'admin/recept', component: ReceptComponent },
