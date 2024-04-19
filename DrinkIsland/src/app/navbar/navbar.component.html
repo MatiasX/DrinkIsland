@@ -16,7 +16,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Recipes
+            Receptek
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" routerLink="/recipes/alcoholic" (click)="toggleMenu()">Alkoholos Koktélok</a></li>
@@ -25,9 +25,9 @@
             <li><a class="dropdown-item" routerLink="/recipes/detailed-search" (click)="toggleMenu()">Keresés név alapján</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" routerLink="/blog" (click)="toggleMenu()">Coctail Blog</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/blog" (click)="toggleMenu()">Koktél Blog</a></li>
         <li class="nav-item" *ngIf="isLoggedIn"><a class="nav-link" routerLink="/userBlog" (click)="toggleMenu()">Saját Posztok</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/calculator" (click)="toggleMenu()">Alcohol Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/calculator" (click)="toggleMenu()">Véralkoholszint számláló</a></li>
         <li class="nav-item dropdown" *ngIf="isAdmin">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
