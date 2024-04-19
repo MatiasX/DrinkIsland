@@ -19,28 +19,27 @@
             Recipes
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" routerLink="/recipes/alcoholic">Alkoholos Koktélok</a></li>
-            <li><a class="dropdown-item" routerLink="/recipes/non-alcoholic">Alkoholmentes Koktélok</a></li>
-            <li><a class="dropdown-item" routerLink="/recipes/type-search">Keresés típus alapján</a></li>
-            <li><a class="dropdown-item" routerLink="/recipes/detailed-search">Keresés név alapján</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/alcoholic" (click)="toggleMenu()">Alkoholos Koktélok</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/non-alcoholic" (click)="toggleMenu()">Alkoholmentes Koktélok</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/type-search" (click)="toggleMenu()">Keresés típus alapján</a></li>
+            <li><a class="dropdown-item" routerLink="/recipes/detailed-search" (click)="toggleMenu()">Keresés név alapján</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" routerLink="/blog">Coctail Blog</a></li>
-        <li class="nav-item" *ngIf="isLoggedIn"><a class="nav-link" routerLink="/userBlog">Saját Posztok</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/calculator">Alcohol Calculator</a></li>
-        <li class="nav-item"><a class="nav-link disabled" routerLink="/support">Segítség</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/blog" (click)="toggleMenu()">Coctail Blog</a></li>
+        <li class="nav-item" *ngIf="isLoggedIn"><a class="nav-link" routerLink="/userBlog" (click)="toggleMenu()">Saját Posztok</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/calculator" (click)="toggleMenu()">Alcohol Calculator</a></li>
         <li class="nav-item dropdown" *ngIf="isAdmin">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Admin
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" routerLink="/admin/alapanyag">Alapanyag</a></li>
-            <li><a class="dropdown-item" routerLink="/admin/ital">Ital</a></li>
-            <li><a class="dropdown-item" routerLink="/admin/recept">Recept</a></li>
-            <li><a class="dropdown-item" routerLink="/admin/tipus">Típus</a></li>
-            <li><a class="dropdown-item" routerLink="/admin/blog">Blog</a></li>
-            <li><a class="dropdown-item" routerLink="/admin/user">User</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/alapanyag" (click)="toggleMenu()">Alapanyag</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/ital" (click)="toggleMenu()">Ital</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/recept" (click)="toggleMenu()">Recept</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/tipus" (click)="toggleMenu()">Típus</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/blog" (click)="toggleMenu()">Blog</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/user" (click)="toggleMenu()">User</a></li>
           </ul>
         </li>
       </ul>
@@ -48,12 +47,12 @@
       <ul class="navbar-nav">
         <!-- Ha BE van jelentkezve a felhasználó -->
         <ng-container *ngIf="isLoggedIn; else loggedOut">
-          <li class="nav-item"><a class="nav-link" (click)="logout()">Kijelentkezés</a></li>
+          <li class="nav-item"><a class="nav-link" (click)="logout()" (click)="toggleMenu()">Kijelentkezés</a></li>
         </ng-container>
         <!-- Ha NINCS bejelentkezve a felhasználó -->
         <ng-template #loggedOut>
-          <li class="nav-item"><a class="nav-link" routerLink="/loginsignup">Bejelentkezés</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="/justsignup">Regisztráció</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/loginsignup" (click)="toggleMenu()">Bejelentkezés</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/justsignup" (click)="toggleMenu()">Regisztráció</a></li>
         </ng-template>
       </ul>      
     </div>
