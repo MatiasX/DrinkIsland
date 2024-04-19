@@ -2,11 +2,11 @@
     <div class="body">
         <div *ngFor="let post of posts" class="card md-3 mb-5">
             <div class="card-header">
-                <input type="text" [(ngModel)]="post.title" name="title" required>
+                <textarea class="title-field" type="text" [(ngModel)]="post.title" name="title" readonly></textarea>
             </div>
             <div class="card-body ">
                 <blockquote class="blockquote ">
-                    <input type="text" [(ngModel)]="post.text" name="text" required>
+                    <textarea class="text-field" type="text" [(ngModel)]="post.text" name="text" readonly></textarea>
                 </blockquote>
             </div>
             <div class="data-cell">
