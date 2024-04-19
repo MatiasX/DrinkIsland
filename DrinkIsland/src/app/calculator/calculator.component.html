@@ -33,8 +33,11 @@
       <button type="submit" class="btn btn-outline-success">Számol</button>
     </form>
 
-    <div class="result" *ngIf="result !== undefined">
-      <b>Az alkohol kitisztulásának várható ideje: <span style="color: red;">{{ result | number: '1.2-2' }} óra</span>.</b>
+    <div class="result" *ngIf="bloodAlcoholContent !== undefined">
+      <b>A becsült véralkoholszintje: <span style="color: red;">{{ bloodAlcoholContent | number: '1.2-2'  }} % </span>.</b>
+    </div>
+    <div class="result" *ngIf="bloodAlcoholContent !== undefined">
+      <b>Az alkohol kitisztulásának várható ideje: <span style="color: red;">{{ soberingTime | number: '1.2-2' }} óra</span>.</b>
     </div>
   </div>
 </div>
