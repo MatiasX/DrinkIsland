@@ -28,7 +28,6 @@ import { AdminBlogComponent } from './admin/admin-blog/admin-blog.component';
 import { UserBlogComponent } from './user-blog/user-blog.component';
 import { TypeSearchComponent } from './recipes/type-search/type-search.component';
 
-
 const appRoutes: Routes = [
   {path: '', component:AlcoholicDrinksComponent}
 ];
