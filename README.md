@@ -25,9 +25,6 @@ npm i
 # Ng-Bootstrap telepítése
 ng add @ng-bootstrap/ng-bootstrap
 
-#Dynamic-forms telepítése
-npm install @ng-dynamic-forms/core @ng-dynamic-forms/ui-basic
-
 # Futtatás
 ng serve -o
 
