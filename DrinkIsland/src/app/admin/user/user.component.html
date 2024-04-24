@@ -8,8 +8,17 @@
           <div class="data-cell">
             <input type="text" [(ngModel)]="user.username" name="name" required>
           </div>
-          <div class="data-cell">
+          <div class="data-cell" *ngIf="user.is_admin==0">
+            <div>Felhasználó</div>
+          </div>
+          <div class="data-cell" *ngIf="user.is_admin==1">
+            <div>Admin</div>
+          </div>
+          <div class="data-cell" *ngIf="user.is_admin==0">
             <button (click)="setAdmin(user)">Hozzáadás az adminokhoz</button>
+          </div>
+          <div class="data-cell" *ngIf="user.is_admin==1">
+            <button (click)="setAdmin(user)">Admin jog elvétele</button>
           </div>
         </li>
       </ul>

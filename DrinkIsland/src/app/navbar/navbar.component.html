@@ -47,6 +47,7 @@
       <ul class="navbar-nav">
         <!-- Ha BE van jelentkezve a felhasználó -->
         <ng-container *ngIf="isLoggedIn; else loggedOut">
+          <li class="nav-item"><a class="nav-link" routerLink="/profile" (click)="toggleMenu()">Profil</a></li>
           <li class="nav-item"><a class="nav-link" (click)="logout()" (click)="toggleMenu()">Kijelentkezés</a></li>
         </ng-container>
         <!-- Ha NINCS bejelentkezve a felhasználó -->

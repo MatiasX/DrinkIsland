@@ -19,12 +19,13 @@ import { TipusComponent } from './admin/tipus/tipus.component';
 import { BlogComponent } from './blog/blog.component';
 import { AdminBlogComponent } from './admin/admin-blog/admin-blog.component';
 import { UserBlogComponent } from './user-blog/user-blog.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'recipes', redirectTo: 'recipes/alcoholic', pathMatch: 'full' },
+  { path: 'recipes', redirectTo: 'recipes/detailed-search', pathMatch: 'full' },
   { path: 'recipes/alcoholic', component: AlcoholicDrinksComponent },
   { path: 'recipes/non-alcoholic', component: NonAlcoholicDrinksComponent },
   { path: 'recipes/detailed-search', component: DetailedSearchComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'admin/tipus', component: TipusComponent },
   { path: 'admin/user', component: UserComponent },
   { path: 'admin/blog', component: AdminBlogComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({

@@ -30,6 +30,8 @@ class ProfileController extends Controller
             'password_confirmation.required'=>"A jelszó megerősítése kötelező!",
             'password_confirmation.same'=>"A két jelszó nem egyezik!",
         ]);
+        $user->password = bcrypt($request->password);
+        $user->password = bcrypt($request->password);
         $user->save();
         return response()->json(['message' => 'Jelszó megváltoztatva']);
     }
@@ -44,9 +46,16 @@ class ProfileController extends Controller
         if (is_null($user)) {
             return response()->json(['message' => 'Nincs ilyen felhasználónevű user.', 'username' => $request->username]);
         }else{
-            $user->is_admin = true;
-            $user->save();
-            return response()->json(['message' => 'Admin jog hozzáadva.']);
+            if ($user->is_admin==false){
+                $user->is_admin = true;
+                $user->save();
+                return response()->json(['message' => 'Admin jog hozzáadva.']);
+            }else{
+                $user->is_admin = false;
+                $user->save();
+                return response()->json(['message' => 'Admin jog elvéve.']);
+            }
+            
         }
                 
     }

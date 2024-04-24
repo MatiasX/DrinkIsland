@@ -27,6 +27,7 @@ import { BlogComponent } from './blog/blog.component';
 import { AdminBlogComponent } from './admin/admin-blog/admin-blog.component';
 import { UserBlogComponent } from './user-blog/user-blog.component';
 import { TypeSearchComponent } from './recipes/type-search/type-search.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {path: '', component:AlcoholicDrinksComponent}
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     BlogComponent,
     AdminBlogComponent,
     UserBlogComponent,
-    TypeSearchComponent
+    TypeSearchComponent,
+    ProfileComponent
   ],
   imports: [
     NgbModule,
