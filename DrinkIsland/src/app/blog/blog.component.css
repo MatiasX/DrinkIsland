@@ -45,14 +45,14 @@
 }
 
 @media (min-width: 768px) {
-    .ingredient-component .card {
+    .blog-component .card {
       width: 80%; /* Szélesség 80% */
       margin: auto; /* Középre igazítás */
     }
   }
   
   @media (max-width: 767px) {
-    .ingredient-component .card {
+    .blog-component .card {
       width: 100%; /* Szélesség 100% */
     }
   }
