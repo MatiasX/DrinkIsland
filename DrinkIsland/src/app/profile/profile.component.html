@@ -3,21 +3,26 @@
       <h1>Jelszó változtatás</h1>
       <form (ngSubmit)="setNewPassword()" #signupForm="ngForm">
         <div class="input-box">
-          <label for="password">Új jelszó:</label>
+          <label for="password">Jelszó:</label>
           <input type="password" id="password" name="password" [(ngModel)]="password" required>
-        </div>
-        <div class="input-box">
-          <label for="password_confirmation">Új jelszó újra:</label>
+          <div class="ICON" (click)="togglePasswordVisibility()">
+              <i class="fas fa-eye" id="password-toggle"></i>
+          </div>
+      </div>
+      <div class="input-box">
+          <label for="password_confirmation">Jelszó újra:</label>
           <input type="password" id="password_confirmation" name="password_confirmation" [(ngModel)]="password_confirmation" required>
-        </div>
+          <div class="ICON1" (click)="togglePasswordVisibility1()">
+              <i class="fas fa-eye second" id="password-toggle1"></i>
+          </div>
+      </div>
         <button id="gomb" type="submit" class="btn">Jelszó megváltoztatása!</button>
         <div class="register_link">
           <p>
-            Felhasználó törlése: 
+            Felhasználó törlése:
             <button type="button" class="del" (click)="deleteAccount()"><b>Fiók törlése</b></button>
           </p>
         </div>
       </form>
     </div>
   </div>
-  

@@ -9,12 +9,12 @@ import { ProfileService } from '../services/profile.service';
 export class ProfileComponent {
   password: string = '';
   password_confirmation: string = '';
-  
+
   constructor(private profileService:ProfileService) { }
 
   setNewPassword(): void {
     const newPassword = {
-      password: this.password,    
+      password: this.password,
       password_confirmation: this.password_confirmation
     };
     this.profileService.setNewPassword(newPassword);
@@ -32,4 +32,37 @@ export class ProfileComponent {
       }
     );
   }
+  togglePasswordVisibility(): void {
+    const passwordField: HTMLInputElement | null = document.getElementById('password') as HTMLInputElement;
+    const passwordToggle: HTMLElement | null = document.getElementById('password-toggle');
+
+    if (passwordField && passwordToggle) {
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            passwordToggle.classList.remove('fa-eye');
+            passwordToggle.classList.add('fa-eye-slash');
+        } else {
+            passwordField.type = 'password';
+            passwordToggle.classList.remove('fa-eye-slash');
+            passwordToggle.classList.add('fa-eye');
+        }
+    }
+}
+
+togglePasswordVisibility1(): void {
+    const passwordConfirmationField: HTMLInputElement | null = document.getElementById('password_confirmation') as HTMLInputElement;
+    const passwordToggle: HTMLElement | null = document.getElementById('password-toggle1');
+
+    if (passwordConfirmationField && passwordToggle) {
+        if (passwordConfirmationField.type === 'password') {
+            passwordConfirmationField.type = 'text';
+            passwordToggle.classList.remove('fa-eye');
+            passwordToggle.classList.add('fa-eye-slash');
+        } else {
+            passwordConfirmationField.type = 'password';
+            passwordToggle.classList.remove('fa-eye-slash');
+            passwordToggle.classList.add('fa-eye');
+        }
+    }
+}
 }

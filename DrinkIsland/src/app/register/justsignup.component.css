@@ -53,6 +53,26 @@
     color: #fff;
 }
 
+.ICON i{
+  margin-top: 25px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.ICON1 i{
+  margin-top: 105px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.usicon i {
+  padding-bottom: 270px;
+  padding-right: 45px;
+}
+.mailka i {
+  padding-bottom: 110px;
+  padding-right: 40px;
+}
 
 .input-box i {
     position: absolute;
