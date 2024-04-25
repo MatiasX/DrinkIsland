@@ -38,3 +38,54 @@ label {
 .result{
   margin-top: 20px;
 }
+
+.value{
+  border: solid black 1px;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+
+.szazalek button{
+  margin-left: 5px;
+}
+
+.szazalek input{
+  margin-left: 5px;
+}
+
+.mennyiseg input{
+  width: 67px;
+  margin-left: 5px;
+}
+
+.cím{
+  text-align: center;
+}
+
+.addNum{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.personal label{
+  margin-right:5px;
+}
+
+.tömeg label{
+  margin-right:5px;
+}
+
+.idő label{
+  margin-right:5px;
+}
+
+/* .eredmeny{
+  text-align: center;
+} */
+
+/* .ResultButton{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+} */
