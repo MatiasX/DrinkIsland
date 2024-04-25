@@ -10,7 +10,7 @@ export class CalculatorService {
     let gramsOfAlcohol=0;
 
     for (const drink of drinks) {
-      gramsOfAlcohol += drink.alcoholAmount * drink.alcoholPercentage * 1.055; // Átváltás ml-ből grammra (1 ml = 1.055 g alkohol)
+      gramsOfAlcohol += drink.alcoholAmount * drink.alcoholPercentage * 0.785; // Átváltás ml-ből grammra (1 ml = 0.785 g alkohol)
     }
     
     let volumeOfDistribution = weight * distribution;
@@ -29,7 +29,7 @@ export class CalculatorService {
     let gramsOfAlcohol=0;
 
     for (const drink of drinks) {
-      gramsOfAlcohol += drink.alcoholAmount * drink.alcoholPercentage * 1.055; // Átváltás ml-ből grammra (1 ml = 1.055 g alkohol)
+      gramsOfAlcohol += drink.alcoholAmount * drink.alcoholPercentage * 0.785; // Átváltás ml-ből grammra (1 ml = 0.785 g alkohol)
     }
     let volumeOfDistribution = weight * distribution;
     let bloodAlcoholContent = (gramsOfAlcohol / volumeOfDistribution - soberingRate * timeSinceLastDrink)/10;

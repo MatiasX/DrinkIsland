@@ -62,6 +62,7 @@ class ProfileController extends Controller
 
     public function deleteAccount() {
         $user = Auth::user();
+        DB::table('posts')->where('user_id', $user->id)->delete();
         $user ->delete();
         return response()->json(['message' => 'Sikeres törlés']);
     }
