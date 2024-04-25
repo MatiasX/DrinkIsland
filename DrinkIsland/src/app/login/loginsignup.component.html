@@ -5,10 +5,16 @@
       <div class="input-box">
         <label for="username">Felhasználónév:</label>
         <input type="text" id="username" name="username" [(ngModel)]="username" required>
+        <div class="usicon">
+          <i class="fas fa-male ico"></i>
+        </div>
       </div>
       <div class="input-box">
         <label for="password">Jelszó:</label>
         <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        <div class="ICON" (click)="togglePasswordVisibility()">
+          <i class="fas fa-eye" id="password-toggle"></i>
+        </div>
       </div>
       <button type="submit" class="btn">Belépek!</button>
       <div class="register_link">
@@ -20,3 +26,4 @@
     </form>
   </div>
 </div>
+

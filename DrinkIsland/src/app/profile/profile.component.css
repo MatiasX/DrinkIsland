@@ -61,6 +61,17 @@
   transform:  translateY(-50%);
   font-size: 20px;
 }
+.ICON i{
+  margin-top: -64px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.ICON1 i{
+  margin-top: 16px;
+  margin-right: 40px;
+  cursor: pointer;
+}
 
 #gomb{
   width: 100%;
