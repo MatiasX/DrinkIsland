@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlapanyagComponent } from './alapanyag.component';
+import { AlapanyagokComponent } from './alapanyag.component';
 
 describe('AlapanyagComponent', () => {
-  let component: AlapanyagComponent;
-  let fixture: ComponentFixture<AlapanyagComponent>;
+  let component: AlapanyagokComponent;
+  let fixture: ComponentFixture<AlapanyagokComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AlapanyagComponent]
+      declarations: [AlapanyagokComponent]
     });
-    fixture = TestBed.createComponent(AlapanyagComponent);
+    fixture = TestBed.createComponent(AlapanyagokComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

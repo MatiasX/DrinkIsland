@@ -46,7 +46,7 @@
 
 
 INSERT INTO `italok` (`id`, `name`) VALUES
-(1, '"PINA" COLADA'),
+(1, 'PINA COLADA'),
 (2, 'MAI TAI'),
 (3, 'Mojito'),
 (4, 'APEROL SPRITZ'),
